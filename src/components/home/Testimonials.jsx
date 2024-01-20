@@ -17,10 +17,10 @@ const Testimonials = () => {
         <p>Testimonials</p>
       </div>
       <h2 className="text-3xl text-center sm:text-left font-bold mb-1">
-        Our Customer's Feedback
+        Our Customer&apos;s Feedback
       </h2>
       <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
-        Don't take our word for it. Trust our customers
+        Don&apos;t take our word for it. Trust our customers
       </p>
       <div className="flex sm:flex-row items-center gap-4 flex-wrap">
         <TestimonialCard
