@@ -10,7 +10,7 @@ const WhyUs = () => {
           Why you should use Edubanc
         </h2>
         <p className="text-textGray mb-4 text-sm max-w-[600px] sm:text-left">
-          We're not just about words, we take action. Edubanc tackles the
+          We&apos;re not just about words, we take action. Edubanc tackles the
           genuine obstacles in Nigerian education, from learning barriers to
           teaching roadblocks, aiming to create tangible change.
         </p>

@@ -29,9 +29,9 @@ const Testimonials = () => {
           role="Software Enginner"
         />
         <TestimonialCard
-          testmonial="I’m grateful for the training and funding provided by Decagon and Edubanc respectively as this has helped me achieve my dream of not only becoming a software engineer but advancing to the level of senior fullstack engineer."
+          testmonial="I'm grateful for the training and funding provided by Decagon and Edubanc respectively as this has helped me achieve my dream of not only becoming a software engineer but advancing to the level of senior fullstack engineer."
           author="Raji Oluwafunbi"
-          role="Senior Fullstack Engineer."
+          role="Senior Fullstack Engineer."
         />
         <TestimonialCard
           testmonial="Our symbiotic relationship with Edubanc had been a rewarding one, for us, as a corporate organization, our clients, who are the parents and the students, and our financial partners, which is Sterling Bank."

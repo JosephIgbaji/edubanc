@@ -99,7 +99,12 @@ const About = () => {
         </div>
       </div>
       <div className="w-[320px] sm:w-[400px] md:w-[500px] relative bg-primary rounded-lg h-[300px]">
-        <Image src="/mobileSoon.png" width={600} height={466} />
+        <Image
+          src="/mobileSoon.png"
+          width={600}
+          height={466}
+          alt="logo-icon-overlay"
+        />
         <div className="absolute -top-6 -left-10 z-10">
           <MiniAbout
             logo={

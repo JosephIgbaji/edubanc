@@ -33,19 +33,6 @@ const Questions = () => {
     },
   ];
 
-  const [showAnswer, setShowAnswer] = useState(false);
-  const [count, setCount] = useState(0);
-
-  const handleShowAnswer = () => {
-    // if (showAnswer || count > 0) {
-    //   setShowAnswer(false);
-    //   setCount(0);
-    //   return;
-    // }
-
-    setShowAnswer(!showAnswer);
-  };
-
   return (
     <div className="mt-32 flex justify-between md:flex-row flex-col">
       <div className="w-[350px] sm:w-[500px] lg:w-[600px] mb-5">
