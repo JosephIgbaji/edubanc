@@ -6,7 +6,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="px-32">
+    <div className="px-5 sm:px-32 mx-auto bg-[#F9FAFB;]">
       <OurProduct />
       <WhyUs />
       <Testimonials />
