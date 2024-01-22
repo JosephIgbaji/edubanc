@@ -6,7 +6,7 @@ import ButtonPrimary from "../ButtonPrimary";
 
 const About = () => {
   return (
-    <div className="flex justify-between md:flex-row flex-col items-center  mt-28 mb-10">
+    <div className="flex justify-between gap-5 md:flex-row flex-col items-center  mt-28 mb-10">
       <div className="w-[320px] sm:w-[400px] md:w-[500px] mb-10 md:mb-0">
         <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[105px] px-2 flex items-center gap-2">
           <svg
@@ -98,9 +98,10 @@ const About = () => {
           </Link>
         </div>
       </div>
-      <div className="w-[320px] sm:w-[400px] md:w-[500px] relative bg-primary rounded-lg h-[300px]">
+      <div className="w-[300px] sm:w-[400px] md:w-[500px] relative bg-primary rounded-lg">
         <Image
-          src="/mobileSoon.png"
+          className="rounded-lg"
+          src="/home-about.png"
           width={600}
           height={466}
           alt="logo-icon-overlay"
@@ -163,7 +164,7 @@ const About = () => {
             title="EdPay"
           />
         </div>
-        <div className="absolute top-28 -right-10">
+        <div className="absolute top-16 md:top-28 -right-5 sm:-right-10">
           <MiniAbout
             logo={
               <svg

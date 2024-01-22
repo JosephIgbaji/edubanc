@@ -22,7 +22,7 @@ const Testimonials = () => {
       <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
         Don&apos;t take our word for it. Trust our customers
       </p>
-      <div className="flex sm:flex-row items-center gap-4 flex-wrap">
+      <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <TestimonialCard
           testmonial="I am immensely grateful to Edubanc for their financial support, which allowed me to fully immerse myself in the bootcamp without worrying about the financial burden."
           author="Boluwatife Adesina"
