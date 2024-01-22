@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutHero = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row gap-10 items-center justify-between mt-16">
+    <div className="flex flex-col md:flex-row gap-10 items-center justify-between">
       <div className="sm:w-[450px] md:w-[500px] lg:w-[600px] ">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-5">
           Committed to <br /> quality education
@@ -17,7 +17,7 @@ const AboutHero = () => {
           and innovation. Join our BIG PICTURE EDUCATION mission.
         </p>
       </div>
-      <div className="w-[400px] ">
+      <div className="w-[300px] ">
         <Image
           className="rounded-lg"
           src="/about-hero.png"
