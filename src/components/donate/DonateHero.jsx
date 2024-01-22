@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const DonateHero = () => {
   return (
-    <div className="relative w-3/4 mb-32">
+    <div className="relative w-3/4 mb-32 flex items-center justify-center sm:block">
       <div className="flex flex-col gap-5 p-8 bg-green-700 rounded-2xl">
         <h2 className="text-2xl lg:text-4xl font-bold text-white">
           Rebuilding the future, <br /> one teacher at a time
@@ -46,7 +46,7 @@ const DonateHero = () => {
           education system with hope and guidance, but they too deserve support.
         </p>
       </div>
-      <div className="absolute w-[300px] h-[300px] top-10 -right-40">
+      <div className="hidden sm:block absolute w-[300px] h-[300px] top-10 -right-40">
         <Image
           className="rounded-full md:rounded-3xl"
           src="/donate-hero.png"
