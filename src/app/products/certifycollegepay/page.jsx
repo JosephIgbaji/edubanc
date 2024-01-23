@@ -2,10 +2,20 @@ import React from "react";
 import EdServices from "../edpay/EdServices";
 import Image from "next/image";
 import ReadyCard from "@/components/ReadyCard";
+import CertifyCareer from "@/components/products/CertifyCareer";
+import ProductHero from "@/components/products/ProductHero";
 
 const CertifyCollegePay = () => {
   return (
     <div className="pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
+      <ProductHero
+        linkTo="#"
+        showtitle
+        image="/collegehero.png"
+        herotitle="CertifyCollegePay"
+        heading="Empower your education with professional certification and tertiary tuition financing"
+        details="CertifyCollegePay is your gateway to professional certification and tertiary tuition financing. Whether you're pursuing education at institutions like Decagon or others, we provide the financial solutions you need to reach your academic and career goals."
+      />
       <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-32">
         <ReadyCard
           icon={
@@ -85,6 +95,14 @@ const CertifyCollegePay = () => {
           details="Connect with a network of educational institutions, including Decagon, to enrich your learning journey"
         />
       </div>
+      <CertifyCareer />
+      <ProductHero
+        linkTo="#"
+        image="/collegerightimage.png"
+        herotitle=""
+        heading="Take the First Step Toward Your Future"
+        details="Ready to transform your educational and career journey? Join CertifyCollegePay today and unlock a world of possibilities. Don't let financial barriers hold you back. Start your application now and embrace a future filled with opportunities."
+      />
       <EdServices />
       <div className="w-full mt-28 flex items-center justify-center">
         <Image

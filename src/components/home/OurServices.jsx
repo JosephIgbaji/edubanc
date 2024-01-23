@@ -64,6 +64,7 @@ const OurServices = () => {
           details="Unlock value distribution with our trusted services"
         />
         <ServicesCard
+          soon
           icon={
             <svg
               width="23"

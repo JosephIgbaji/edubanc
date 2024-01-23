@@ -3,10 +3,20 @@ import Image from "next/image";
 import EdpayFAQ from "./EdpayFAQ";
 import EdServices from "./EdServices";
 import ReadyCard from "@/components/ReadyCard";
+import EdpayPaving from "@/components/products/EdpayPaving";
+import ProductHero from "@/components/products/ProductHero";
 
 const EdpayHome = () => {
   return (
     <div className="pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
+      <ProductHero
+        showtitle
+        linkTo="#"
+        image="/edpayhero.png"
+        herotitle="Edpay"
+        heading="Unlocking financial ease with EdPay"
+        details="EdPay revolutionizes education financing. Offering swift, affordable access to funds for fees, it ensures uninterrupted learning for students. Schools also benefit from revenue assurance, guaranteeing seamless program execution. Experience hassle-free education finance with EdPay."
+      />
       <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-32">
         <ReadyCard
           icon={
@@ -96,6 +106,14 @@ const EdpayHome = () => {
           details="EdPay ensures an undistorted learning cycle, allowing you to focus on your studies without the worry of fee-related interruptions."
         />
       </div>
+      <EdpayPaving />
+      <ProductHero
+        linkTo="#"
+        image="/edpayrightimage.png"
+        herotitle=""
+        heading="Tailored interest rates for your financial ease"
+        details="EdPay customizes interest rates to fit your financial comfort. Benefit from rates as low as 9%, tailored to your agreement terms with our partnered schools. Embrace financial flexibility with EdPay."
+      />
       <EdServices />
       <div className="w-full mt-28 mb-20 flex items-center justify-center">
         <Image

@@ -24,6 +24,7 @@ const OurProduct = () => {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
         <ProductCard
+          linkTo="/products/edpay"
           icon={
             <svg
               width="22"
@@ -64,6 +65,7 @@ const OurProduct = () => {
           color="#426AF2"
         />
         <ProductCard
+          linkTo="/products/certifycollegepay"
           icon={
             <svg
               width="21"
@@ -90,6 +92,7 @@ const OurProduct = () => {
           color="#297373"
         />
         <ProductCard
+          linkTo="/products/tuitionfinance"
           icon={
             <svg
               width="21"
@@ -116,6 +119,7 @@ const OurProduct = () => {
           color="#231123"
         />
         <ProductCard
+          soon
           icon={
             <svg
               width="22"
@@ -156,6 +160,7 @@ const OurProduct = () => {
           color="#F99247"
         />
         <ProductCard
+          soon
           icon={
             <svg
               width="21"
@@ -182,6 +187,7 @@ const OurProduct = () => {
           color="#DB353A"
         />
         <ProductCard
+          soon
           icon={
             <svg
               width="21"

@@ -7,7 +7,7 @@ const EdServices = () => {
       <h2 className="text-3xl text-center sm:text-left font-bold mb-3">
         Explore our services
       </h2>
-      <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
+      <p className="text-textGray mb-4 text-sm md:text-lg max-w-[600px] text-center sm:text-left">
         Unveil a new era of education with Edubanc&apos;s transformative
         products. From cutting-edge financial services to impactful training
         programs, our offerings empower educators, students, and administrators.
