@@ -1,39 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import ButtonPrimary from "../ButtonPrimary";
 import QuestionCard from "../QuestionCard";
 import faqs from "../faqs";
 
 const Questions = () => {
-  // const faqs = [
-  //   {
-  //     question: "What is Edubanc?",
-  //     answer:
-  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-  //   },
-  //   {
-  //     question: "What are the objectives of Edubance?",
-  //     answer:
-  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-  //   },
-  //   {
-  //     question: "What is Edubanc offering?",
-  //     answer:
-  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-  //   },
-  //   {
-  //     question: "What is Edubanc?",
-  //     answer:
-  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-  //   },
-  //   {
-  //     question: "What is Edubanc?",
-  //     answer:
-  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-  //   },
-  // ];
-
   return (
     <div className="mt-32 flex justify-between md:flex-row flex-col">
       <div className="w-[300px] md:w-[350px] sm:w-[500px] lg:w-[600px] mb-5">
