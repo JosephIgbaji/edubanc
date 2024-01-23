@@ -105,14 +105,14 @@ const TuitionFinance = () => {
         </div>
         <div className="w-[320px] sm:w-[400px] md:w-[500px] mb-10 md:mb-0">
           <h2 className="text-3xl md:text-xl lg:text-3xl  font-bold mb-3 mt-5">
-            Discover the unique features of Edubanc's tertiary seamless tuition
-            payment
+            Discover the unique features of Edubanc&apos;s tertiary seamless
+            tuition payment
           </h2>
 
           <p className="text-sm md:text-lg mb-5 text-textGray">
             Edubanc stands out in the world of foreign tuition financing, thanks
-            to our remarkable features. We're committed to transforming your
-            international education dreams into reality. Learn about the
+            to our remarkable features. We&apos;re committed to transforming
+            your international education dreams into reality. Learn about the
             outstanding features that make us your ideal partner.
           </p>
           <Link href="#">
