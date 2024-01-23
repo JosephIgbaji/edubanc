@@ -11,8 +11,11 @@ const QuestionCard = ({ que, ans }) => {
 
   return (
     <div className="sm:w-[400px] md:w-[500px] lg:w-[600px] p-4">
-      <div className="flex items-center justify-between">
-        <h3 className="font-semibold">{que}</h3>
+      <div
+        onClick={handleShow}
+        className="cursor-pointer flex items-center justify-between"
+      >
+        <h3 className="font">{que}</h3>
         {show ? (
           <svg
             className="cursor-pointer"

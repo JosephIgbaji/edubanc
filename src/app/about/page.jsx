@@ -7,7 +7,6 @@ import Testimonials from "@/components/home/Testimonials";
 import WhyUs from "@/components/home/WhyUs";
 import React from "react";
 
-//1234637749 - access
 const About = () => {
   return (
     <div className="px-5  pt-16 sm:px-32 mx-auto bg-[#F9FAFB;]">

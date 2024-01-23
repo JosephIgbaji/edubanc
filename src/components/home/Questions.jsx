@@ -3,35 +3,36 @@ import React, { useState } from "react";
 import Link from "next/link";
 import ButtonPrimary from "../ButtonPrimary";
 import QuestionCard from "../QuestionCard";
+import faqs from "../faqs";
 
 const Questions = () => {
-  const faqs = [
-    {
-      question: "What is Edubanc?",
-      answer:
-        "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-    },
-    {
-      question: "What are the objectives of Edubance?",
-      answer:
-        "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-    },
-    {
-      question: "What is Edubanc offering?",
-      answer:
-        "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-    },
-    {
-      question: "What is Edubanc?",
-      answer:
-        "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-    },
-    {
-      question: "What is Edubanc?",
-      answer:
-        "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
-    },
-  ];
+  // const faqs = [
+  //   {
+  //     question: "What is Edubanc?",
+  //     answer:
+  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
+  //   },
+  //   {
+  //     question: "What are the objectives of Edubance?",
+  //     answer:
+  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
+  //   },
+  //   {
+  //     question: "What is Edubanc offering?",
+  //     answer:
+  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
+  //   },
+  //   {
+  //     question: "What is Edubanc?",
+  //     answer:
+  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
+  //   },
+  //   {
+  //     question: "What is Edubanc?",
+  //     answer:
+  //       "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education.",
+  //   },
+  // ];
 
   return (
     <div className="mt-32 flex justify-between md:flex-row flex-col">
@@ -45,9 +46,13 @@ const Questions = () => {
         </Link>
       </div>
       <div>
-        {faqs.map((ques, index) => (
-          <QuestionCard key={index} que={ques.question} ans={ques.answer} />
-        ))}
+        {faqs
+          .filter(
+            (ques) => ques.category === "edubanc" && faqs.indexOf(ques) < 5
+          )
+          .map((ques, index) => (
+            <QuestionCard key={index} que={ques.question} ans={ques.answer} />
+          ))}
       </div>
     </div>
   );
