@@ -8,10 +8,10 @@ const EdServices = () => {
         Explore our services
       </h2>
       <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
-        Unveil a new era of education with Edubanc's transformative products.
-        From cutting-edge financial services to impactful training programs, our
-        offerings empower educators, students, and administrators. Join us in
-        reshaping learning for a brighter future.
+        Unveil a new era of education with Edubanc&apos;s transformative
+        products. From cutting-edge financial services to impactful training
+        programs, our offerings empower educators, students, and administrators.
+        Join us in reshaping learning for a brighter future.
       </p>
       <div className="flex flex-wrap">
         <ServicesCard
