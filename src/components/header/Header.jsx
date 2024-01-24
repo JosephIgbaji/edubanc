@@ -15,7 +15,7 @@ const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const currentRoute = usePathname();
   const linkStyle =
-    "p-3 hover:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 ";
+    "p-3 hover:text-primary hover:bg-primary cursor-pointer rounded-lg hover:bg-opacity-20 ";
   const activeStyle = linkStyle + "bg-primary bg-opacity-20 text-primary";
   return (
     <header className="md:px-32 px-5 py-5 relative">
@@ -41,7 +41,13 @@ const Header = () => {
           <div className="relative group">
             <NavProduct />
             <div
-              className="p-3 cursor-pointer flex items-center gap-2 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+              className={
+                currentRoute === "/products/edpay" ||
+                currentRoute === "/products/certifycollegepay" ||
+                currentRoute === "/products/tuitionfinance"
+                  ? activeStyle + " flex items-center gap-2"
+                  : linkStyle + " flex items-center  gap-2"
+              }
               href=""
             >
               Products {""}
@@ -65,7 +71,13 @@ const Header = () => {
           <div className="relative group">
             <NavServices />
             <div
-              className="p-3 cursor-pointer flex items-center gap-2 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+              className={
+                currentRoute === "/services/" ||
+                currentRoute === "/services/" ||
+                currentRoute === "/services/"
+                  ? activeStyle + " flex items-center gap-2"
+                  : linkStyle + " flex items-center  gap-2"
+              }
               href=""
             >
               Services {""}
