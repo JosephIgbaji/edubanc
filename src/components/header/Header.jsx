@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import ButtonPrimary from "../ButtonPrimary";
 import NavProductMobile from "./NavProductMobile";
 import NavProduct from "./NavProduct";
@@ -11,24 +13,27 @@ import NavServicesMobile from "./NavServicesMobile";
 
 const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
-
+  const currentRoute = usePathname();
+  const linkStyle =
+    "p-3 hover:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 ";
+  const activeStyle = linkStyle + "bg-primary bg-opacity-20 text-primary";
   return (
     <header className="md:px-32 px-5 py-5 relative">
       <nav className="flex items-center justify-between">
         <div>
-          <Link href="/">
+          <Link onClick={() => setShowMobileNav(false)} href="/">
             <Image src="/logo.png" width={117} height={49} alt="logo" />
           </Link>
         </div>
         <div className="hidden md:flex gap-5 text-black text-opacity-50">
           <Link
             href="/"
-            className="p-3 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+            className={currentRoute === "/" ? activeStyle : linkStyle}
           >
             Home
           </Link>
           <Link
-            className="p-3 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+            className={currentRoute === "/about" ? activeStyle : linkStyle}
             href="/about"
           >
             About Us
@@ -82,7 +87,7 @@ const Header = () => {
             </div>
           </div>
           <Link
-            className="p-3 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+            className={currentRoute === "/blog" ? activeStyle : linkStyle}
             href="/blog"
           >
             Blog
