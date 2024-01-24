@@ -2,10 +2,10 @@ import React from "react";
 import NavProductCardMobile from "./NavProductCardMobile";
 import Link from "next/link";
 
-const NavProductMobile = () => {
+const NavProductMobile = ({ onclick }) => {
   return (
-    <div className="hidden z-10 bg-white p-3 group-hover:flex flex-col gap-3">
-      <Link href="/products/edpay">
+    <div className="hidden w-[280px] z-10 bg-white p-3 group-hover:flex flex-col gap-3">
+      <Link onClick={onclick} href="/products/edpay">
         <NavProductCardMobile
           icon={
             <svg
@@ -34,7 +34,7 @@ const NavProductMobile = () => {
           heading="EdPay"
         />
       </Link>
-      <Link href="/products/certifycollegepay">
+      <Link onClick={onclick} href="/products/certifycollegepay">
         <NavProductCardMobile
           icon={
             <svg
@@ -60,7 +60,7 @@ const NavProductMobile = () => {
           heading="CertifyCollegePay"
         />
       </Link>
-      <Link href="/products/tuitionfinance">
+      <Link onClick={onclick} href="/products/tuitionfinance">
         <NavProductCardMobile
           icon={
             <svg
@@ -89,34 +89,36 @@ const NavProductMobile = () => {
           heading="Study Abroad With Edubanc"
         />
       </Link>
-      <NavProductCardMobile
-        icon={
-          <svg
-            width="16"
-            height="20"
-            viewBox="0 0 16 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              opacity="0.4"
-              d="M10.0859 5L5.91411 5L4.51303 3.39296C3.13959 1.81763 4.74185 -0.537024 6.74707 0.109848L7.67484 0.409141C7.88607 0.477283 8.11393 0.477283 8.32516 0.409141L9.25293 0.109848C11.2582 -0.537023 12.8604 1.81763 11.487 3.39296L10.0859 5Z"
-              fill="#009CBD"
-            />
-            <path
-              opacity="0.4"
-              d="M1.68355 8.21035C2.46632 5.7055 4.78612 4 7.41043 4H8.58814C11.2125 4 13.5323 5.7055 14.315 8.21035L15.565 12.2104C16.7724 16.0739 13.886 20 9.83814 20H6.16043C2.11259 20 -0.773816 16.0739 0.433553 12.2104L1.68355 8.21035Z"
-              fill="#009CBD"
-            />
-            <path
-              d="M10.5 12.5C10.5 11.1193 9.38071 10 8 10C6.61929 10 5.5 11.1193 5.5 12.5C5.5 13.8807 6.61929 15 8 15C9.38071 15 10.5 13.8807 10.5 12.5Z"
-              fill="#009CBD"
-            />
-          </svg>
-        }
-        soon
-        heading="PayFlex"
-      />
+      <Link onClick={onclick} href="#">
+        <NavProductCardMobile
+          icon={
+            <svg
+              width="16"
+              height="20"
+              viewBox="0 0 16 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M10.0859 5L5.91411 5L4.51303 3.39296C3.13959 1.81763 4.74185 -0.537024 6.74707 0.109848L7.67484 0.409141C7.88607 0.477283 8.11393 0.477283 8.32516 0.409141L9.25293 0.109848C11.2582 -0.537023 12.8604 1.81763 11.487 3.39296L10.0859 5Z"
+                fill="#009CBD"
+              />
+              <path
+                opacity="0.4"
+                d="M1.68355 8.21035C2.46632 5.7055 4.78612 4 7.41043 4H8.58814C11.2125 4 13.5323 5.7055 14.315 8.21035L15.565 12.2104C16.7724 16.0739 13.886 20 9.83814 20H6.16043C2.11259 20 -0.773816 16.0739 0.433553 12.2104L1.68355 8.21035Z"
+                fill="#009CBD"
+              />
+              <path
+                d="M10.5 12.5C10.5 11.1193 9.38071 10 8 10C6.61929 10 5.5 11.1193 5.5 12.5C5.5 13.8807 6.61929 15 8 15C9.38071 15 10.5 13.8807 10.5 12.5Z"
+                fill="#009CBD"
+              />
+            </svg>
+          }
+          soon
+          heading="PayFlex"
+        />
+      </Link>
     </div>
   );
 };

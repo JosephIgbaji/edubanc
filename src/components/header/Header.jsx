@@ -129,7 +129,7 @@ const Header = () => {
           </Link>
           <div className=" group">
             <div className="absolute right-0 top-0">
-              <NavProductMobile />
+              <NavProductMobile onclick={() => setShowMobileNav(false)} />
             </div>
             <div
               className="p-3 cursor-pointer flex items-center gap-2 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
@@ -155,7 +155,7 @@ const Header = () => {
           </div>
           <div className="group">
             <div className="absolute top-0 right-0">
-              <NavServicesMobile />
+              <NavServicesMobile onclick={() => setShowMobileNav(false)} />
             </div>
             <div
               className="p-3 cursor-pointer flex items-center gap-2 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
