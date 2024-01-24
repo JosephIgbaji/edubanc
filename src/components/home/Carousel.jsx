@@ -14,7 +14,6 @@ const HeroCarousel = () => {
         showThumbs={false}
         autoPlay={true}
         infiniteLoop={true}
-        interval={6000}
       >
         <Link href="/products/edpay">
           <div>

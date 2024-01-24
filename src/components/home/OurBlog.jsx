@@ -3,7 +3,7 @@ import React from "react";
 const OurBlog = () => {
   return (
     <div className="mt-32">
-      <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[100px] px-2 flex items-center gap-2">
+      <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[110px] px-2 flex items-center gap-2">
         <svg
           width="8"
           height="8"

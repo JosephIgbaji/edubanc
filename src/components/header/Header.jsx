@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPrimary from "../ButtonPrimary";
+import NavProductMobile from "./NavProductMobile";
 import NavProduct from "./NavProduct";
 import NavServices from "./NavServices";
+import NavServicesMobile from "./NavServicesMobile";
 
 const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -108,6 +110,92 @@ const Header = () => {
           </svg>
         </div>
       </nav>
+      {showMobileNav && (
+        <div className="flex flex-col top-20 left-0 absolute px-8 md:hidden bg-white z-10 w-full">
+          {/* <div className="md:flex gap-5 text-black text-opacity-50"> */}
+          <Link
+            onClick={() => setShowMobileNav(false)}
+            href="/"
+            className="p-3 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+          >
+            Home
+          </Link>
+          <Link
+            onClick={() => setShowMobileNav(false)}
+            className="p-3 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+            href="/about"
+          >
+            About Us
+          </Link>
+          <div className=" group">
+            <div className="absolute right-0 top-0">
+              <NavProductMobile />
+            </div>
+            <div
+              className="p-3 cursor-pointer flex items-center gap-2 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+              href=""
+            >
+              Products {""}
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M0.414376 0.531506C0.673133 0.20806 1.1451 0.155619 1.46855 0.414376L6.00003 4.03956L10.5315 0.414376C10.855 0.155619 11.3269 0.20806 11.5857 0.531506C11.8444 0.854953 11.792 1.32692 11.4685 1.58568L6.46855 5.58568C6.19464 5.80481 5.80542 5.80481 5.53151 5.58568L0.531506 1.58568C0.20806 1.32692 0.155619 0.854953 0.414376 0.531506Z"
+                  fill="black"
+                  fillOpacity="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="group">
+            <div className="absolute top-0 right-0">
+              <NavServicesMobile />
+            </div>
+            <div
+              className="p-3 cursor-pointer flex items-center gap-2 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+              href=""
+            >
+              Services {""}
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M0.414376 0.531506C0.673133 0.20806 1.1451 0.155619 1.46855 0.414376L6.00003 4.03956L10.5315 0.414376C10.855 0.155619 11.3269 0.20806 11.5857 0.531506C11.8444 0.854953 11.792 1.32692 11.4685 1.58568L6.46855 5.58568C6.19464 5.80481 5.80542 5.80481 5.53151 5.58568L0.531506 1.58568C0.20806 1.32692 0.155619 0.854953 0.414376 0.531506Z"
+                  fill="black"
+                  fillOpacity="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <Link
+            onClick={() => setShowMobileNav(false)}
+            className="p-3 hover:text-primary active:text-primary focus:text-primary hover:bg-primary rounded-lg hover:bg-opacity-20 active:bg-opacity-20 focus:bg-opacity-20 active:bg-primary focus:bg-primary"
+            href="/blog"
+          >
+            Blog
+          </Link>
+          {/* </div> */}
+          <div className="">
+            <Link href="/donate" onClick={() => setShowMobileNav(false)}>
+              <button className="bg-primary p-3 rounded-lg mx-3 text-white w-full">
+                Donate
+              </button>
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

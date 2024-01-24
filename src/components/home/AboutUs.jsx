@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="flex justify-between gap-5 md:flex-row flex-col items-center  mt-28 mb-10">
       <div className="w-[320px] sm:w-[400px] md:w-[500px] mb-10 md:mb-0">
-        <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[105px] px-2 flex items-center gap-2">
+        <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[110px] px-2 flex items-center gap-2">
           <svg
             width="8"
             height="8"

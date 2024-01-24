@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AboutHero from "@/components/AboutHero";
 import OurStory from "@/components/OurStory";
 import ReadyCard from "@/components/ReadyCard";
@@ -126,10 +127,91 @@ const About = () => {
         />
       </div>
       <OurStory />
+      {/* <div className="h-80 w-80 bg-gradient-to-br from-blue-700 to-stone-50"></div> */}
       <OurProduct />
       <WhyUs />
       <Testimonials />
-      <Questions />
+      <div className="flex gap-10 justify-between flex-col md:flex-row mt-32">
+        <div className="rounded-3xl p-10 md:w-5/12 min-h-72 bg-gradient-to-br from-emerald-600 to-stone-50 relative overflow-hidden">
+          <div>
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M17.1459 3.29727L14.8382 5.60495C13.6835 4.68125 12.2187 4.12891 10.625 4.12891C6.89708 4.12891 3.875 7.15098 3.875 10.8789C3.875 14.6068 6.89708 17.6289 10.625 17.6289C14.3529 17.6289 17.375 14.6068 17.375 10.8789C17.375 9.80454 17.124 8.7888 16.6774 7.88713L19.0597 5.50485C20.0507 7.05696 20.625 8.90087 20.625 10.8789C20.625 16.4018 16.1478 20.8789 10.625 20.8789C5.10215 20.8789 0.625 16.4018 0.625 10.8789C0.625 5.35606 5.10215 0.878906 10.625 0.878906C13.1165 0.878906 15.3951 1.79004 17.1459 3.29727Z"
+                fill="white"
+              />
+              <path
+                d="M13.7691 6.67409C12.8927 6.0177 11.8042 5.62891 10.625 5.62891C7.7255 5.62891 5.375 7.97941 5.375 10.8789C5.375 13.7784 7.7255 16.1289 10.625 16.1289C13.5245 16.1289 15.875 13.7784 15.875 10.8789C15.875 10.2266 15.756 9.60213 15.5386 9.02592L13.3554 11.2092C13.1922 12.5723 12.032 13.6289 10.625 13.6289C9.10622 13.6289 7.875 12.3977 7.875 10.8789C7.875 9.36012 9.10622 8.12891 10.625 8.12891C11.1118 8.12891 11.5692 8.25542 11.9658 8.47736L13.7691 6.67409Z"
+                fill="white"
+              />
+              <path
+                d="M21.1553 1.40924L11.8626 10.702C11.8708 10.7598 11.875 10.8189 11.875 10.8789C11.875 11.5693 11.3154 12.1289 10.625 12.1289C9.93464 12.1289 9.375 11.5693 9.375 10.8789C9.375 10.1885 9.93464 9.62891 10.625 9.62891C10.6851 9.62891 10.7441 9.63314 10.8019 9.64133L20.0947 0.348576C20.3876 0.0556829 20.8624 0.0556829 21.1553 0.348576C21.4482 0.641469 21.4482 1.11634 21.1553 1.40924Z"
+                fill="white"
+              />
+            </svg>
+            <h2 className="text-white mt-5 mb-2">Our Mission</h2>
+            <p className="text-textGray lg:text-lg leading-8 h-auto">
+              Leveraging technology and fostering partnerships to promote access
+              to qualityeducation
+            </p>
+          </div>
+          <Image
+            className="absolute rounded-l-full bottom-0 opacity-30 right-0"
+            src="/about-hero.png"
+            width={350}
+            height={500}
+            // layout="fill"
+            alt="alt"
+          />
+        </div>
+        <div className="rounded-3xl p-10 md:w-5/12 min-h-72 bg-gradient-to-br from-cyan-600 to-stone-50 relative overflow-hidden">
+          <div>
+            <svg
+              width="22"
+              height="21"
+              viewBox="0 0 22 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M17.1459 3.29727L14.8382 5.60495C13.6835 4.68125 12.2187 4.12891 10.625 4.12891C6.89708 4.12891 3.875 7.15098 3.875 10.8789C3.875 14.6068 6.89708 17.6289 10.625 17.6289C14.3529 17.6289 17.375 14.6068 17.375 10.8789C17.375 9.80454 17.124 8.7888 16.6774 7.88713L19.0597 5.50485C20.0507 7.05696 20.625 8.90087 20.625 10.8789C20.625 16.4018 16.1478 20.8789 10.625 20.8789C5.10215 20.8789 0.625 16.4018 0.625 10.8789C0.625 5.35606 5.10215 0.878906 10.625 0.878906C13.1165 0.878906 15.3951 1.79004 17.1459 3.29727Z"
+                fill="white"
+              />
+              <path
+                d="M13.7691 6.67409C12.8927 6.0177 11.8042 5.62891 10.625 5.62891C7.7255 5.62891 5.375 7.97941 5.375 10.8789C5.375 13.7784 7.7255 16.1289 10.625 16.1289C13.5245 16.1289 15.875 13.7784 15.875 10.8789C15.875 10.2266 15.756 9.60213 15.5386 9.02592L13.3554 11.2092C13.1922 12.5723 12.032 13.6289 10.625 13.6289C9.10622 13.6289 7.875 12.3977 7.875 10.8789C7.875 9.36012 9.10622 8.12891 10.625 8.12891C11.1118 8.12891 11.5692 8.25542 11.9658 8.47736L13.7691 6.67409Z"
+                fill="white"
+              />
+              <path
+                d="M21.1553 1.40924L11.8626 10.702C11.8708 10.7598 11.875 10.8189 11.875 10.8789C11.875 11.5693 11.3154 12.1289 10.625 12.1289C9.93464 12.1289 9.375 11.5693 9.375 10.8789C9.375 10.1885 9.93464 9.62891 10.625 9.62891C10.6851 9.62891 10.7441 9.63314 10.8019 9.64133L20.0947 0.348576C20.3876 0.0556829 20.8624 0.0556829 21.1553 0.348576C21.4482 0.641469 21.4482 1.11634 21.1553 1.40924Z"
+                fill="white"
+              />
+            </svg>
+            <h2 className="text-white mt-5 mb-2">Our Vision</h2>
+            <p className="text-textGray lg:text-lg leading-8 h-auto">
+              To reduce the number of out-of-school children, provide more tech
+              talents solve the human capital problem in the education sector.
+            </p>
+          </div>
+          <Image
+            className="absolute rounded-full -top-10 opacity-30 right-0"
+            src="/donate-hero.png"
+            width={350}
+            height={200}
+            // layout="fill"
+            alt="alt"
+          />
+        </div>
+      </div>
+      <div className="mb-32">
+        <Questions />
+      </div>
     </div>
   );
 };
