@@ -4,7 +4,7 @@ import Image from "next/image";
 const ImageLeft = () => {
   return (
     <div className="flex flex-col md:flex-row gap-10 items-center justify-between mt-16">
-      <div className="w-[300px]">
+      <div className="">
         <Image
           className="rounded-xl"
           src="/donate-imageLeft.png"
