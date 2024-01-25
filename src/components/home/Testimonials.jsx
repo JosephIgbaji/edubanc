@@ -23,7 +23,7 @@ const Testimonials = () => {
         Don&apos;t take our word for it. Trust our customers
       </p>
       <div
-        className="flex gap-5 w-full overflow-x-auto"
+        className="flex gap-5 w-full overflow-x-scroll"
         // style={{
         //   width: "100%",
         //   overflow: "auto",

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ProductCard = ({ soon, color, icon, title, details, linkTo }) => {
   return (
-    <div className="relative flex flex-col items-center gap-7 py-7 text-center bg-white rounded-lg w-[300px] h-[260px]">
+    <div className="relative flex flex-col items-center gap-5 py-7 px-4 text-center bg-white rounded-lg w-[300px] h-[260px]">
       <div
         style={{ backgroundColor: color }}
         className="absolute -top-4 flex items-center justify-center w-10 h-10 rounded-full"
