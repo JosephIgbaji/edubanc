@@ -22,14 +22,7 @@ const Testimonials = () => {
       <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
         Don&apos;t take our word for it. Trust our customers
       </p>
-      <div
-        className="flex gap-5 w-full overflow-x-scroll"
-        // style={{
-        //   width: "100%",
-        //   overflow: "auto",
-        //   display: "flex",
-        // }}
-      >
+      <div className="flex gap-5 w-full overflow-x-scroll">
         {/* <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"> */}
         <TestimonialCard
           testmonial="I am immensely grateful to Edubanc for their financial support, which allowed me to fully immerse myself in the bootcamp without worrying about the financial burden."

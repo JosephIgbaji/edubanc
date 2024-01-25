@@ -131,8 +131,9 @@ const About = () => {
       <OurProduct />
       <WhyUs />
       <Testimonials />
-      <div className="flex gap-10 justify-between flex-col md:flex-row mt-32">
-        <div className="rounded-3xl p-10 md:w-5/12 min-h-72 bg-gradient-to-br from-emerald-600 to-stone-50 relative overflow-hidden">
+      <div className="flex gap-10 justify-between flex-col md:flex-row mt-32 ">
+        <div className="rounded-3xl p-10 md:w-5/12 h-[240px] bg-gradient-to-br from-emerald-600 to-stone-50 relative overflow-hidden">
+          {/* <div className="rounded-3xl md:w-5/12 h-[240px] bg-[url('https://placekitten.com/1400')] bg-cover bg-center relative overflow-hidden"> */}
           <div>
             <svg
               width="22"
@@ -156,21 +157,21 @@ const About = () => {
               />
             </svg>
             <h2 className="text-white mt-5 mb-2">Our Mission</h2>
-            <p className="text-textGray lg:text-lg leading-8 h-auto">
+            <p className="text-white lg:text-lg leading-6 w-[300px] h-auto">
               Leveraging technology and fostering partnerships to promote access
               to qualityeducation
             </p>
           </div>
           <Image
-            className="absolute rounded-l-full bottom-0 opacity-30 right-0"
-            src="/about-hero.png"
+            className="absolute opacity-20 rounded-lg bottom-0 right-0"
+            src="/mission.jpg"
             width={350}
             height={500}
             // layout="fill"
             alt="alt"
           />
         </div>
-        <div className="rounded-3xl p-10 md:w-5/12 min-h-72 bg-gradient-to-br from-cyan-600 to-stone-50 relative overflow-hidden">
+        <div className="rounded-3xl p-10 md:w-5/12 h-[240px] bg-gradient-to-br from-cyan-600 to-stone-50 relative overflow-hidden">
           <div>
             <svg
               width="22"
@@ -194,16 +195,16 @@ const About = () => {
               />
             </svg>
             <h2 className="text-white mt-5 mb-2">Our Vision</h2>
-            <p className="text-textGray lg:text-lg leading-8 h-auto">
+            <p className="text-white lg:text-lg leading-6 w-[300px] h-auto ">
               To reduce the number of out-of-school children, provide more tech
               talents solve the human capital problem in the education sector.
             </p>
           </div>
           <Image
-            className="absolute rounded-full -top-10 opacity-30 right-0"
-            src="/donate-hero.png"
+            className="absolute opacity-20 rounded-lg top-0 right-0"
+            src="/vision.jpg"
             width={350}
-            height={200}
+            height={300}
             // layout="fill"
             alt="alt"
           />
