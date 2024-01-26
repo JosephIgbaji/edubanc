@@ -6,8 +6,8 @@ import ButtonPrimary from "../ButtonPrimary";
 
 const Elevate = () => {
   return (
-    <div className="flex justify-between md:flex-row flex-col items-center  mt-28 mb-10">
-      <div className="w-[320px] sm:w-[400px] md:w-[500px] mb-10 md:mb-0">
+    <div className="flex flex-col lg:flex-row justify-between lg:gap-24 items-center mt-28 mb-10">
+      <div className="w-[320px] sm:w-[400px] lg:max-w-[500px] mb-10 md:mb-0">
         <h2 className="text-3xl md:text-xl lg:text-3xl  font-bold mb-2">
           Elevate your career with the Teacher Training Initiative
         </h2>
@@ -114,7 +114,7 @@ const Elevate = () => {
         </div>
       </div>
 
-      <div className="w-[300px] md:w-[500px] h-[300px]">
+      <div className="min-w-[300px] bg-gray-400 lg:bg-transparent rounded-2xl lg:max-w-[500px]">
         <Image
           src="/donate-elevate.png"
           width={600}

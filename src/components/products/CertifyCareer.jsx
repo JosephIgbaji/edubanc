@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const CertifyCareer = () => {
   return (
-    <div className="flex justify-between md:flex-row flex-col items-center mt-28 mb-28 gap-10 ">
-      <div className="w-[300px] md:w-[500px] h-[300px] md:h-[400px]">
+    <div className="flex justify-between lg:flex-row flex-col items-center mt-28 mb-16 lg:mb-28 gap-10 ">
+      <div className="min-w-[300px] md:max-w-[500px]">
         <Image
           className="rounded-lg"
           src="/collegeleftimage.png"
@@ -13,7 +13,7 @@ const CertifyCareer = () => {
           alt="logo-icon-overlay"
         />
       </div>
-      <div className="w-[320px] sm:w-[400px] md:w-[500px] mb-10 md:mb-0">
+      <div className="min-w-[300px]  lg:max-w-[500px] mb-10 md:mb-0">
         <h2 className="text-3xl md:text-xl lg:text-3xl  font-bold mb-2">
           Your key to educational and career excellence
         </h2>

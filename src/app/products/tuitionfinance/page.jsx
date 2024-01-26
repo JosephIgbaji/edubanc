@@ -11,6 +11,7 @@ const TuitionFinance = () => {
   return (
     <div className="pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
       <ProductHero
+        color="#F99247"
         showtitle
         herotitle="Foreign Tuition Financing"
         image="/foreignfinancehero.png"
@@ -94,7 +95,7 @@ const TuitionFinance = () => {
       </div>
 
       <div className="flex justify-between md:flex-row flex-col items-center mb-20 mt-32 md:gap-[80px]">
-        <div className="w-[300px] rounded-lg md:w-[500px] h-[300px] md:h-[400px] overflow-hidden">
+        <div className="min-w-[300px] rounded-lg lg:max-w-[500px] h-[300px] md:h-[400px] overflow-hidden">
           <Image
             className="rounded-lg"
             src="/foreignfinanceleft.png"
@@ -103,7 +104,7 @@ const TuitionFinance = () => {
             alt="icon-overlay"
           />
         </div>
-        <div className="w-[320px] sm:w-[400px] md:w-[500px] mb-10 md:mb-0">
+        <div className="min-w-[320px] lg:max-w-[500px] lg:mb-10 md:mb-0">
           <h2 className="text-3xl md:text-xl lg:text-3xl  font-bold mb-3 mt-5">
             Discover the unique features of Edubanc&apos;s tertiary seamless
             tuition payment
@@ -116,12 +117,13 @@ const TuitionFinance = () => {
             outstanding features that make us your ideal partner.
           </p>
           <Link href="#">
-            <ButtonPrimary name="Get Started" />
+            <ButtonPrimary name="Get Started" color="#F99247" />
           </Link>
         </div>
       </div>
 
       <ProductHero
+        color="#F99247"
         image="/foreignfinanceright.png"
         linkTo="#"
         heading="Start your global learning journey"

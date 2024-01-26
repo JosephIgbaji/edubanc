@@ -7,7 +7,7 @@ import DonateHero from "@/components/donate/DonateHero";
 
 const Donate = () => {
   return (
-    <div className="pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
+    <div className="flex flex-col items-center lg:block pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
       <DonateHero />
       <Payment />
       <ImageLeft />

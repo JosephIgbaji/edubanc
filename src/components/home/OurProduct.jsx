@@ -4,25 +4,27 @@ import ProductCard from "../ProductCard";
 const OurProduct = () => {
   return (
     <div className="mt-40 flex flex-col items-center sm:block">
-      <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[140px] px-2 flex items-center gap-2">
-        <svg
-          width="8"
-          height="8"
-          viewBox="0 0 8 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="4" cy="4" r="3" fill="#5277F3" />
-        </svg>
-        <p>Our Products</p>
+      <div>
+        <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[140px] px-2 flex items-center gap-2">
+          <svg
+            width="8"
+            height="8"
+            viewBox="0 0 8 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="4" cy="4" r="3" fill="#5277F3" />
+          </svg>
+          <p>Our Products</p>
+        </div>
+        <h2 className="text-3xl font-bold mb-6">Easy, Empowering, Global</h2>
+        <p className="text-textGray mb-16 text-sm max-w-[600px]">
+          Discover a spectrum of financial services, training programs, and
+          welfare-enhancing packages that redefine how education is experienced
+          and delivered.
+        </p>
       </div>
-      <h2 className="text-3xl font-bold mb-6">Easy, Empowering, Global</h2>
-      <p className="text-textGray mb-16 text-sm max-w-[600px] text-center sm:text-left">
-        Discover a spectrum of financial services, training programs, and
-        welfare-enhancing packages that redefine how education is experienced
-        and delivered.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         <ProductCard
           linkTo="/products/edpay"
           icon={

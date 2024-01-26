@@ -7,8 +7,9 @@ const Payment = () => {
   const [paymentOption, setPaymentOption] = useState("card");
 
   return (
-    <div className="flex gap-10 flex-col-reverse md:flex-row justify-around">
-      <div className="md:w-5/12 bg-primary rounded-xl p-4">
+    // <div className="flex gap-10 flex-col items-center lg:flex-row justify-between">
+    <div className="flex flex-col items-center gap-10 lg:gap-32 lg:grid grid-cols-2 lg:items-center lg:justify-between">
+      <div className="min-w-[300px] sm:w-[330px] md:w-[440px] lg:max-w-[500px] bg-primary rounded-xl p-4">
         <section className="text-gray-200 text-xs flex items-center justify-around">
           <div
             style={paymentOption === "card" ? style : {}}
@@ -44,7 +45,7 @@ const Payment = () => {
           {paymentOption === "card" ? <CardPayment /> : <BankTransfer />}
         </div>
       </div>
-      <div className="md:w-5/12">
+      <div className="self-auto">
         <Image
           className="rounded-xl"
           src="/donate-payment.png"

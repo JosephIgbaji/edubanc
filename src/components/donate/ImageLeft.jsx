@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const ImageLeft = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-10 items-center justify-between mt-16">
-      <div className="w-[300px] sm:w-auto">
+    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-24 items-center justify-between mt-16">
+      <div className="min-w-[300px] sm:w-[400px] md:w-[500px]">
         <Image
           className="rounded-xl"
           src="/donate-imageLeft.png"
@@ -13,7 +13,7 @@ const ImageLeft = () => {
           alt="logo-icon-overlay"
         />
       </div>
-      <div className="max-w-[600px] ">
+      <div className="max-w-[500px] ">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-5">
           When you fund education, you ignite a bright future
         </h2>

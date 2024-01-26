@@ -4,15 +4,15 @@ import ServicesCard from "@/components/ServicesCard";
 const EdServices = () => {
   return (
     <div className="mt-32 flex flex-col items-center sm:block">
-      <h2 className="text-3xl text-center sm:text-left font-bold mb-3">
-        Explore our services
-      </h2>
-      <p className="text-textGray mb-4 text-sm md:text-lg max-w-[600px] text-center sm:text-left">
-        Unveil a new era of education with Edubanc&apos;s transformative
-        products. From cutting-edge financial services to impactful training
-        programs, our offerings empower educators, students, and administrators.
-        Join us in reshaping learning for a brighter future.
-      </p>
+      <div>
+        <h2 className="text-3xl font-bold mb-3">Explore our services</h2>
+        <p className="text-textGray mb-4 text-sm md:text-lg max-w-[600px] md:text-center sm:text-left">
+          Unveil a new era of education with Edubanc&apos;s transformative
+          products. From cutting-edge financial services to impactful training
+          programs, our offerings empower educators, students, and
+          administrators. Join us in reshaping learning for a brighter future.
+        </p>
+      </div>
       <div className="flex flex-wrap">
         <ServicesCard
           icon={

@@ -9,6 +9,7 @@ const CertifyCollegePay = () => {
   return (
     <div className="pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
       <ProductHero
+        color="#297373"
         linkTo="#"
         showtitle
         image="/collegehero.png"
@@ -97,6 +98,7 @@ const CertifyCollegePay = () => {
       </div>
       <CertifyCareer />
       <ProductHero
+        color="#297373"
         linkTo="#"
         image="/collegerightimage.png"
         herotitle=""

@@ -11,7 +11,7 @@ const FAQMain = () => {
   return (
     <div className="mt-0 flex flex-col items-center">
       <div>
-        <h2 className="text-primary text-4xl font-semibold mb-10 text-center">
+        <h2 className="text-primary text-4xl font-semibold mb-10 md:text-center">
           Have some questions you&apos;d like answered?
           <br />
           Here are the answers to some frequently asked

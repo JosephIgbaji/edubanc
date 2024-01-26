@@ -3,7 +3,7 @@ import ServicesCard from "../ServicesCard";
 
 const OurServices = () => {
   return (
-    <div className="mt-32 flex flex-col items-center sm:block">
+    <div className="mt-32 flex flex-col sm:block">
       <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[140px] px-2 flex items-center gap-2">
         <svg
           width="8"
@@ -16,10 +16,10 @@ const OurServices = () => {
         </svg>
         <p>Our Services</p>
       </div>
-      <h2 className="text-3xl text-center sm:text-left font-bold mb-3">
+      <h2 className="text-3xl font-bold mb-3">
         Trendy, Effortless, Comprehensive
       </h2>
-      <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
+      <p className="text-textGray mb-4 text-sm max-w-[600px]">
         From cutting-edge financial services to impactful training programs, our
         offerings empower educators, students, and administrators.
       </p>

@@ -9,11 +9,12 @@ const ProductHero = ({
   herotitle,
   linkTo,
   heading,
+  color,
   details,
 }) => {
   return (
-    <div className="flex justify-between md:flex-row flex-col items-center mb-10 md:gap-[80px]">
-      <div className="w-[320px] sm:w-[400px] md:w-[500px] mb-10 md:mb-0">
+    <div className="flex justify-between lg:flex-row flex-col items-center mb-10 md:gap-[80px]">
+      <div className="min-w-[300px  md:max-w-[500px] mb-10 lg:mb-0">
         {showtitle && (
           <span className="p-2 rounded-lg mb-5 text-secondaryGreen bg-secondaryGreen bg-opacity-10">
             {herotitle}
@@ -26,10 +27,10 @@ const ProductHero = ({
 
         <p className="text-sm md:text-lg mb-5 text-textGray">{details}</p>
         <Link href={linkTo}>
-          <ButtonPrimary name="Get Started" />
+          <ButtonPrimary name="Get Started" color={color} />
         </Link>
       </div>
-      <div className="w-[300px] rounded-lg md:w-[500px] h-[300px] md:h-[400px] overflow-hidden">
+      <div className="min-w-[300px] rounded-lg md:w-[500px] h-[300px] md:h-[400px] overflow-hidden">
         <Image
           className="rounded-lg"
           src={image}

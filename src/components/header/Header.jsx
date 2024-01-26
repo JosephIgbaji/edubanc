@@ -105,12 +105,12 @@ const Header = () => {
             Blog
           </Link>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Link href="/donate">
             <ButtonPrimary name="Donate" />
           </Link>
         </div>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <svg
             onClick={() => setShowMobileNav(!showMobileNav)}
             className="cursor-pointer"
@@ -128,7 +128,7 @@ const Header = () => {
         </div>
       </nav>
       {showMobileNav && (
-        <div className="flex flex-col top-20 left-0 absolute px-8 md:hidden bg-white z-10 w-full">
+        <div className="flex flex-col top-20 left-0 absolute px-8 lg:hidden bg-white z-10 w-full">
           {/* <div className="md:flex gap-5 text-black text-opacity-50"> */}
           <Link
             onClick={() => setShowMobileNav(false)}

@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const Testimonials = () => {
   return (
-    <div className="mt-32 flex flex-col sm:block items-center">
+    <div className="mt-32 flex flex-col sm:block">
       <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[130px] px-2 flex items-center gap-2">
         <svg
           width="8"
@@ -17,10 +17,8 @@ const Testimonials = () => {
         </svg>
         <p>Testimonials</p>
       </div>
-      <h2 className="text-3xl text-center sm:text-left font-bold mb-1">
-        Our Customer&apos;s Feedback
-      </h2>
-      <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
+      <h2 className="text-3xl font-bold mb-1">Our Customer&apos;s Feedback</h2>
+      <p className="text-textGray mb-4 text-sm max-w-[600px] ">
         Don&apos;t take our word for it. Trust our customers
       </p>
       {/* <div className="flex gap-5 w-full overflow-x-scroll scroll-smooth"> */}

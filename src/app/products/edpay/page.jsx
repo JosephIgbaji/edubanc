@@ -123,7 +123,9 @@ const EdpayHome = () => {
           height={100}
         />
       </div>
-      <EdpayFAQ />
+      <div className="hidden md:block">
+        <EdpayFAQ />
+      </div>
     </div>
   );
 };
