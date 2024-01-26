@@ -1,5 +1,6 @@
 import React from "react";
 import HomeBlogCard from "./HomeBlogCard";
+import Marquee from "react-fast-marquee";
 
 const OurBlog = () => {
   return (
@@ -22,7 +23,8 @@ const OurBlog = () => {
       <p className="text-textGray mb-4 text-sm max-w-[600px] text-center sm:text-left">
         Keep up to date with our informative and educational log
       </p>
-      <div className="flex gap-5 w-full overflow-x-scroll">
+      <Marquee>
+        {/* <div className="flex gap-5 w-full overflow-x-scroll"> */}
         {/* <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"> */}
         <HomeBlogCard
           image="/blog-api-stack.jpeg"
@@ -59,7 +61,8 @@ const OurBlog = () => {
           heading="Building your API Stack"
           post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
         />
-      </div>
+        {/* </div> */}
+      </Marquee>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const ProductCard = ({ soon, color, icon, title, details, linkTo }) => {
+  const bghoverStyles = "";
   return (
     <div className="relative flex flex-col items-center gap-5 py-7 px-4 text-center bg-white rounded-lg w-[300px] h-[260px]">
       <div
@@ -15,6 +16,7 @@ const ProductCard = ({ soon, color, icon, title, details, linkTo }) => {
       {!soon ? (
         <Link href={linkTo}>
           <div className="flex">
+            {/* <p style={{ color: color }} className="bg-[]"> */}
             <p style={{ color: color }}>Explore Now</p>
             <svg
               width="21"

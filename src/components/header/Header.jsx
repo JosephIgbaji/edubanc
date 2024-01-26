@@ -25,7 +25,7 @@ const Header = () => {
             <Image src="/logo.png" width={117} height={49} alt="logo" />
           </Link>
         </div>
-        <div className="hidden md:flex gap-5 text-black text-opacity-50">
+        <div className="hidden lg:flex gap-5 text-black text-opacity-50">
           <Link
             href="/"
             className={currentRoute === "/" ? activeStyle : linkStyle}
