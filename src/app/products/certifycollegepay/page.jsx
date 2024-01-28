@@ -4,6 +4,7 @@ import Image from "next/image";
 import ReadyCard from "@/components/ReadyCard";
 import CertifyCareer from "@/components/products/CertifyCareer";
 import ProductHero from "@/components/products/ProductHero";
+import CertifyServices from "./CertifyServices";
 
 const CertifyCollegePay = () => {
   return (
@@ -105,7 +106,8 @@ const CertifyCollegePay = () => {
         heading="Take the First Step Toward Your Future"
         details="Ready to transform your educational and career journey? Join CertifyCollegePay today and unlock a world of possibilities. Don't let financial barriers hold you back. Start your application now and embrace a future filled with opportunities."
       />
-      <EdServices />
+      {/* <EdServices /> */}
+      <CertifyServices />
       <div className="w-full mt-28 flex items-center justify-center">
         <Image
           src="/mobileSoon.png"

@@ -6,6 +6,7 @@ import ButtonPrimary from "@/components/ButtonPrimary";
 import ReadyCard from "@/components/ReadyCard";
 import EdServices from "../edpay/EdServices";
 import ProductHero from "@/components/products/ProductHero";
+import TuitionServices from "./TuitionServices";
 
 const TuitionFinance = () => {
   return (
@@ -129,7 +130,8 @@ const TuitionFinance = () => {
         heading="Start your global learning journey"
         details="Don't wait any longer to explore the world of education. Edubanc is here to help you make your international education dreams a reality. Take the first step toward a global learning adventure. Apply now and embrace a world of opportunities."
       />
-      <EdServices />
+      {/* <EdServices /> */}
+      <TuitionServices />
 
       <div className="w-full mt-28 mb-20 flex items-center justify-center">
         <Image
