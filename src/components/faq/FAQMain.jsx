@@ -17,8 +17,8 @@ const FAQMain = () => {
           Here are the answers to some frequently asked
         </h2>
       </div>
-      <div className="flex lg:gap-10 sm:flex-row flex-col ">
-        <div className="md:w-60 lg:w-80 list-none flex sm:flex-col gap-2 sm:gap-6 mb-5 md:mb-0">
+      <div className="flex lg:gap-10 md:flex-row flex-col ">
+        <div className="w-[300px] sm:max-w-[400px] text-xs md:text-lg lg:w-80 list-none flex sm:flex-col gap-2 sm:gap-6 mb-5 md:mb-0">
           <li
             className="cursor-pointer p-2 rounded-lg"
             onClick={() => setCategory("edubanc")}
@@ -54,13 +54,13 @@ const FAQMain = () => {
           >
             Schoolable
           </li>
-          <li
+          {/* <li
             className="cursor-pointer p-2 rounded-lg"
             onClick={() => setCategory("lbs")}
             style={category === "lbs" ? CategoryStyle : {}}
           >
             LBS
-          </li>
+          </li> */}
         </div>
         <div>
           <div>

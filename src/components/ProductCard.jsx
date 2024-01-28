@@ -2,7 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 const ProductCard = ({ soon, color, icon, title, details, linkTo }) => {
-  const bghoverStyles = "";
+  const hover = {
+    backgroundColor: color,
+    color: "white",
+  };
   return (
     <div className="relative flex flex-col items-center gap-5 py-7 px-4 text-center bg-white rounded-lg w-[300px] h-[260px]">
       <div

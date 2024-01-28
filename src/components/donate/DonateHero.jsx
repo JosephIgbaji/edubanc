@@ -5,7 +5,7 @@ import Image from "next/image";
 const DonateHero = () => {
   return (
     <div className="relative w-3/4 mb-32 flex items-center justify-center md:block">
-      <div className="flex flex-col h-[800px] sm:h-[820px] md:h-[850px] lg:h-[auto] items-center lg:items-start p-8 bg-green-700 rounded-2xl">
+      <div className="min-w-[320px] flex flex-col h-[800px] sm:h-[820px] md:h-[850px] lg:h-[auto] items-center lg:items-start p-8 bg-green-700 rounded-2xl">
         <div className="flex flex-col gap-5 mb-4">
           <h2 className="text-2xl lg:text-5xl font-bold text-white">
             Rebuilding the future, <br /> one teacher at a time

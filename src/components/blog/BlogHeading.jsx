@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogHeading = () => {
   return (
-    <div className="flex items-center flex-col gap-5 mb-20">
+    <div className="min-w-[300px] flex items-center flex-col gap-5 mb-20">
       <p className="text-lg">Our Blog</p>
       <h2 className="text-primary text-4xl font-bold text-center">
         Stories and interviews
