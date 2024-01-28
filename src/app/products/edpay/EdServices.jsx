@@ -31,6 +31,7 @@ const EdServices = () => {
               <circle cx="16" cy="4" r="4" fill="white" />
             </svg>
           }
+          color="#426AF2"
           heading="Tuition Collection and Remittance Services"
           details="Effortlessly manage tuition collection and remittance with our comprehensive services."
         />
@@ -50,6 +51,7 @@ const EdServices = () => {
               />
             </svg>
           }
+          color="#426AF2"
           heading="Value Distribution Services"
           details="Unlock value distribution with our trusted services"
         />
@@ -83,6 +85,7 @@ const EdServices = () => {
               />
             </svg>
           }
+          color="#426AF2"
           heading="Lending API distribution services"
           details="Experience the power of lending APIs with our distribution services"
         />
