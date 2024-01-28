@@ -7,13 +7,13 @@ const ImageLeft = () => {
       <div className="min-w-[300px] sm:w-[400px] md:w-[500px]">
         <Image
           className="rounded-xl"
-          src="/donate-imageLeft.png"
+          src="/donate-imageLeft.jpeg"
           width={600}
           height={466}
           alt="logo-icon-overlay"
         />
       </div>
-      <div className="max-w-[500px] ">
+      <div className="min-w-[300px] max-w-[500px] ">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-5">
           When you fund education, you ignite a bright future
         </h2>
