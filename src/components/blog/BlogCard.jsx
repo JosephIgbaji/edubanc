@@ -4,7 +4,7 @@ import Image from "next/image";
 const BlogCard = ({ heading, miniPost, image, author, date, avatar }) => {
   return (
     <div className="w-[300px] p-2 bg-white rounded-lg">
-      <Image src={image} width={300} height={200} />
+      <Image src={image} width={300} height={200} alt="alt" />
       <div className="flex gap-2 my-3 text-xs justify-between items-center">
         <p className="font-semibold text-sm">{heading}</p>
         <svg
