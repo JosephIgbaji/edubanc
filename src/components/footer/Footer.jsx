@@ -115,10 +115,10 @@ const Footer = () => {
           <Link className="text-white text-sm" href="/about">
             About Us
           </Link>
-          <Link className="text-white text-sm" href="/products">
+          <Link className="text-white text-sm" href="/">
             Products
           </Link>
-          <Link className="text-white text-sm" href="/services">
+          <Link className="text-white text-sm" href="/">
             Services
           </Link>
           <Link className="text-white text-sm" href="/blog">
