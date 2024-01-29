@@ -6,7 +6,7 @@ const BlogCard = ({ heading, miniPost, image, author, date, avatar }) => {
     <div className="w-[300px] p-2 bg-white rounded-lg">
       <Image src={image} width={300} height={200} alt="alt" />
       <div className="flex gap-2 my-3 text-xs justify-between items-center">
-        <p className="font-semibold text-sm">{heading}</p>
+        <h2 className="font-semibold text-lg">{heading}</h2>
         <svg
           width="24"
           height="24"
@@ -23,12 +23,14 @@ const BlogCard = ({ heading, miniPost, image, author, date, avatar }) => {
           />
         </svg>
       </div>
-      <p className="text-xs mb-2 overflow-hidden h-16 ">{miniPost}</p>
+      <p className="text-xs text-black text-opacity-50 mb-2 overflow-hidden h-16 ">
+        {miniPost}
+      </p>
       <div className="flex gap-3 items-center">
         <Image className="rounded-full" src={avatar} width={40} height={40} />
         <div>
           <p className="text-sm font-semibold">{author}</p>
-          <p className="text-sm">{date}</p>
+          <p className="text-sm text-black text-opacity-50">{date}</p>
         </div>
       </div>
     </div>

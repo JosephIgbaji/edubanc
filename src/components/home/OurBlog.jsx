@@ -1,6 +1,6 @@
 import React from "react";
+import Link from "next/link";
 import HomeBlogCard from "./HomeBlogCard";
-import Marquee from "react-fast-marquee";
 
 const OurBlog = () => {
   return (
@@ -21,26 +21,30 @@ const OurBlog = () => {
       <p className="text-textGray mb-4 text-sm max-w-[600px]">
         Keep up to date with our informative and educational log
       </p>
-      {/* <Marquee> */}
-      {/* <div className="flex gap-5 w-full overflow-x-scroll"> */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <HomeBlogCard
-          image="/blog-api-stack.jpeg"
-          heading="Building your API Stack"
-          post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
-        />
-        <HomeBlogCard
-          image="/blog-api-stack.jpeg"
-          heading="Building your API Stack"
-          post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
-        />
-        <HomeBlogCard
-          image="/blog-api-stack.jpeg"
-          heading="Building your API Stack"
-          post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
-        />
+        <Link href="/blog/relevanceofeducation">
+          <HomeBlogCard
+            image="/blog-api-stack.jpeg"
+            heading="Building your API Stack"
+            post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
+          />
+        </Link>
+        <Link href="/blog/educationforall">
+          <HomeBlogCard
+            image="/blog-api-stack.jpeg"
+            heading="Building your API Stack"
+            post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
+          />
+        </Link>
+        <Link href="/blog/relevanceoftechnology">
+          <HomeBlogCard
+            image="/blog-api-stack.jpeg"
+            heading="Building your API Stack"
+            post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
+          />
+        </Link>
       </div>
-      {/* </Marquee> */}
     </div>
   );
 };
