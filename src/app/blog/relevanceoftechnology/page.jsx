@@ -57,7 +57,7 @@ const page = () => {
           needs of each learner can be overwhelming in a traditional classroom.
           However with technology, diverse adaptive learning styles have been
           introduced. From interactive simulations to AI-driven assessments,
-          using technology in education ensures that each student's unique
+          using technology in education ensures that each student&apos;s unique
           strengths and challenges are recognized, fostering a more inclusive
           and effective learning experience for all.
           <br />

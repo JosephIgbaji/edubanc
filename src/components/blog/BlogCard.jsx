@@ -27,7 +27,13 @@ const BlogCard = ({ heading, miniPost, image, author, date, avatar }) => {
         {miniPost}
       </p>
       <div className="flex gap-3 items-center">
-        <Image className="rounded-full" src={avatar} width={40} height={40} />
+        <Image
+          className="rounded-full"
+          src={avatar}
+          width={40}
+          height={40}
+          alt="alt"
+        />
         <div>
           <p className="text-sm font-semibold">{author}</p>
           <p className="text-sm text-black text-opacity-50">{date}</p>
