@@ -56,30 +56,6 @@ const Blog = () => {
           image="/blog-2.jpeg"
           avatar="/blogpostavatar.png"
         />
-        <BlogCard
-          heading="RELEVANCE OF TECHNOLOGY "
-          miniPost="With the current trend in education, learning is being revolutionized. All thanks to the increase in the development of technology."
-          author="Edubanc"
-          date="27 Jan 2024"
-          image="/blog-api-stack.jpeg"
-          avatar="/blogpostavatar.png"
-        />
-        <BlogCard
-          heading="RELEVANCE OF EDUCATION"
-          miniPost="In a rapidly evolving world, education stands as the cornerstone of personal and societal development, and as we embrace the digital age, the landscape of education is changing."
-          author="Edubanc"
-          date="27 Jan 2024"
-          image="/blog-1.jpeg"
-          avatar="/blogpostavatar.png"
-        />
-        <BlogCard
-          heading="EDUCATION FOR ALL"
-          miniPost="Access to quality education is the right of every Nigerian. However, several factors can challenge individuals' access to quality education"
-          author="Edubanc"
-          date="27 Jan 2024"
-          image="/blog-2.jpeg"
-          avatar="/blogpostavatar.png"
-        />
       </div>
     </div>
   );
