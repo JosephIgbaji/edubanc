@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "What is Edubanc?",
     answer:
-      "Edubanc is a digital Banking platform that is powered by Sterling Bank to address the needs and challenges of stakeholders in the education sector. ",
+      "Edubanc is an Edtech startup focused on solving basic human capital problems as regards access to quality and affordable education. ",
     category: "edubanc",
   },
   {
@@ -14,19 +14,13 @@ const faqs = [
   {
     question: "What is Edubanc offering?",
     answer:
-      "Edubanc is focused on improving the quality and standard of education in Nigeria by: Providing financial services to Stakeholders (Grants, Scholarships, Investment opportunities, loans, etc.)        Organising of training programs for Teachers, towards capacity building. Provision of welfare-enhancing packages for stakeholders. ",
+      "Edubanc is focused on improving the quality and standard of education in Nigeria by: Providing financial services to Stakeholders (Grants, Investment opportunities, etc.) Organising of training programs for Teachers, towards capacity building. Provision of welfare-enhancing packages for stakeholders. ",
     category: "edubanc",
   },
   {
     question: "What products are available under Edubanc? ",
     answer:
-      "There are lot of amazing products/offering on Edubanc, these include: TEACHERS TRAINING - A free online learning platform that avail all Nigeria teachers the opportunity to acquire soft skills and also have access to a preparatory training for TRCN (Teachers Registration Council of Nigeria) certification. This program is done in partnership with 1million teachers (1MT) EDINVEST - An investment platform that allows you earn attractive interest on your investment while availing you an opportunity to contribute to an improved education system in Nigeria. EDPAY - A lending platform that offers finance to Parents/Guardians solely for the purpose of school fee payment for Students. EDCLUB - A target savings product that allows you save for a minimum of 3 months with the benefit of personal loan of up to 200% of total savings, and an alternative access asset financing. <br /> ALTMALL - An e-commerce platform that enables you purchase items of your choice online with an opportunity for a convenient repayment plan. ",
-    category: "edubanc",
-  },
-  {
-    question: "Is Edubanc only open to Sterling Bank account holders?",
-    answer:
-      "No. Everybody is welcome to be a part of Edubanc community as a Donor, Investor or Beneficiary. ",
+      "There are lot of amazing products/offering on Edubanc, these include: TEACHERS TRAINING - A free online learning platform that avail all Nigeria teachers the opportunity to acquire soft skills and also have access to a preparatory training for TRCN (Teachers Registration Council of Nigeria) certification. This program is done in partnership with 1million teachers (1MT) EDINVEST - An investment platform that allows you earn attractive interest on your investment while availing you an opportunity to contribute to an improved education system in Nigeria. EDPAY - A lending platform that offers finance to Parents/Guardians solely for the purpose of school fee payment for Students. EDCLUB - A target savings product that allows you save for a minimum of 3 months with the benefit of personal loan of up to 200% of total savings, and an alternative access asset financing. ALTMALL - An e-commerce platform that enables you purchase items of your choice online with an opportunity for a convenient repayment plan. ",
     category: "edubanc",
   },
   {

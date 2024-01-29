@@ -39,23 +39,23 @@ const Blog = () => {
             avatar="/blogpostavatar.png"
           />
         </Link>
-        <NewsLetter />
-        <BlogCard
+        {/* <NewsLetter /> */}
+        {/* <BlogCard
           heading="LOREM IPSUM DOLOR EMET"
           miniPost="In a rapidly evolving world, education stands as the cornerstone of personal and societal development, and as we embrace the digital age, the landscape of education is changing."
           author="Edubanc"
           date="27 Jan 2024"
           image="/blog-1.jpeg"
           avatar="/blogpostavatar.png"
-        />
-        <BlogCard
+        /> */}
+        {/* <BlogCard
           heading="LOREM IPSUM DOLOR EMET"
           miniPost="Access to quality education is the right of every Nigerian. However, several factors can challenge individuals' access to quality education"
           author="Edubanc"
           date="27 Jan 2024"
           image="/blog-2.jpeg"
           avatar="/blogpostavatar.png"
-        />
+        /> */}
       </div>
     </div>
   );

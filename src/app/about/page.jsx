@@ -159,7 +159,7 @@ const About = () => {
             <h2 className="text-white mt-5 mb-2">Our Mission</h2>
             <p className="text-white lg:text-lg leading-6 w-[300px] h-auto">
               Leveraging technology and fostering partnerships to promote access
-              to qualityeducation
+              to quality education
             </p>
           </div>
           <Image
@@ -196,8 +196,8 @@ const About = () => {
             </svg>
             <h2 className="text-white mt-5 mb-2">Our Vision</h2>
             <p className="text-white lg:text-lg leading-6 w-[300px] h-auto ">
-              To reduce the number of out-of-school children, provide more tech
-              talents solve the human capital problem in the education sector.
+              To create an ecosystem where quality education is affordable and
+              within the reach of all.
             </p>
           </div>
           <Image
