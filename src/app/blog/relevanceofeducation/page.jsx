@@ -51,7 +51,7 @@ const page = () => {
           In a rapidly evolving world, education stands as the cornerstone of
           personal and societal development, and as we embrace the digital age,
           the landscape of education is changing. Education is not just a means
-          to an end; it's a lifelong journey that empowers individuals in
+          to an end; it&apos;s a lifelong journey that empowers individuals in
           countless ways. With the upgrade in the level of technological
           advancement, learning has become more engaging, convenient, and
           dynamic. <br />
@@ -60,9 +60,9 @@ const page = () => {
           enhances career prospects, which eventually leads to growth in
           society. Ensuring every child gets educated affordably and within
           means is the goal of Edubanc. We are interested in improving the human
-          capital challenges in the education sector through our Free Teacher's
-          Training Initiative and by reducing the number of out-of-school
-          students.
+          capital challenges in the education sector through our Free
+          Teacher&apos;s Training Initiative and by reducing the number of
+          out-of-school students.
           <br />
           <br /> This has propelled us to financially aid and keep over 4700
           learners in school with our monthly tuition payment solution, Edpay,
@@ -71,7 +71,7 @@ const page = () => {
           current Director General of the World Trade Organization. <br />
           <br />
           She has received numerous recognitions and awards for her
-          effectiveness. All these wouldn't have been possible without
+          effectiveness. All these wouldn&apos;t have been possible without
           education. Give yourself or your child a chance to learn with
           convenience using Edpay, a tuition financing solution on
           www.edubanc.ng, and set out on a journey to global relevance.
