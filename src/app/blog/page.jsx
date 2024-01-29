@@ -41,7 +41,7 @@ const Blog = () => {
         </Link>
         <NewsLetter />
         <BlogCard
-          heading="RELEVANCE OF EDUCATION"
+          heading="LOREM IPSUM DOLOR EMET"
           miniPost="In a rapidly evolving world, education stands as the cornerstone of personal and societal development, and as we embrace the digital age, the landscape of education is changing."
           author="Edubanc"
           date="27 Jan 2024"
@@ -49,7 +49,7 @@ const Blog = () => {
           avatar="/blogpostavatar.png"
         />
         <BlogCard
-          heading="EDUCATION FOR ALL"
+          heading="LOREM IPSUM DOLOR EMET"
           miniPost="Access to quality education is the right of every Nigerian. However, several factors can challenge individuals' access to quality education"
           author="Edubanc"
           date="27 Jan 2024"
