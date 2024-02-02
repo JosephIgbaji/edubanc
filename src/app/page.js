@@ -1,3 +1,4 @@
+"use client";
 import AboutUs from "@/components/home/AboutUs";
 import Carousel from "@/components/home/Carousel";
 import OurBlog from "@/components/home/OurBlog";
@@ -8,7 +9,7 @@ import Testimonials from "./../components/home/Testimonials";
 import Image from "next/image";
 import WhyUs from "@/components/home/WhyUs";
 import Questions from "@/components/home/Questions";
-import ButtonPrimary from "@/components/ButtonPrimary";
+// import ButtonPrimary from "@/components/ButtonPrimary";
 import SubscribeToNews from "@/components/home/SubscribeToNews";
 
 export default function Home() {
