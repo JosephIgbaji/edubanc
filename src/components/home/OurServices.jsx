@@ -23,7 +23,7 @@ const OurServices = () => {
         From cutting-edge financial services to impactful training programs, our
         offerings empower educators, students, and administrators.
       </p>
-      <div className="flex flex-wrap">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <ServicesCard
           icon={
             <svg

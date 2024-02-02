@@ -68,9 +68,14 @@ const faqs = [
   },
   {
     question: "What are the criteria for the EdPay loan application?",
-    answer:
-      "    The applicant should be a salary-earner or a business owner. <br /> Applicant should provide details of operational account reflecting salary or business earnings in the last 6 months. <br /> Applicants Bank Verification Numbers (BVN) must be linked to the account details provided. <br />The loan request should not be more than 33.3% of applicant's monthly income. <br />The applicant should have a good credit report.",
+    answer: "    The applicant should be a salary-earner or a business owner.",
     category: "edpay",
+    lists: [
+      "Applicant should provide details of operational account reflecting salary or business earnings in the last 6 months.",
+      "Applicants Bank Verification Numbers (BVN) must be linked to the account details provided.",
+      "The loan request should not be more than 33.3% of applicant's monthly income.",
+      "The applicant should have a good credit report.",
+    ],
   },
   {
     question: "What is your interest rate?",
@@ -139,9 +144,17 @@ const faqs = [
   },
   {
     question: "What are the criteria for loan application?",
-    answer:
-      "    You must have gotten your admission number from Nexford university. <br/> Your BVN must be linked to the operational account provided. <br/>You must have been in employment for a minimum of 6 months as a salary earner. <br/>Your business must have been running for at least 6 months as a business owner. <br/>Your loan should not be more than 33.3% of your monthly income. <br/>You must have a good credit report. <br/>Your loan application cannot be more than the expected school fee amount. ",
+    answer: "",
     category: "nexford",
+    lists: [
+      "You must have gotten your admission number from Nexford university.",
+      "Your BVN must be linked to the operational account provided.",
+      "You must have been in employment for a minimum of 6 months as a salary earner.",
+      "Your business must have been running for at least 6 months as a business owner.",
+      "Your loan should not be more than 33.3% of your monthly income.",
+      "You must have a good credit report.",
+      "Your loan application cannot be more than the expected school fee amount.",
+    ],
   },
   {
     question: "What is your interest rate?",
