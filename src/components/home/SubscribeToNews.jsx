@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const SubscribeToNews = () => {
   return (
     <div className="w-full mt-32 mb-32 text-center flex flex-col items-center justify-center">
       <h2 className="text-2xl font-semibold">
-        "Stay in the loop and be the first to know about exciting updates!
-        Subscribe to our newsletter from Edubanc."
+        &quot;Stay in the loop and be the first to know about exciting updates!
+        Subscribe to our newsletter from Edubanc.&quot;
       </h2>
       <p className="text-sm text-textGray my-4">
         Sign up for our newsletter and get news on the latest on Edubanc
@@ -121,10 +121,7 @@ const SubscribeToNews = () => {
             </div>
           </form>
         </div>
-        <script
-          type="text/javascript"
-          src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-        ></script>
+        <MailchimpScript />
         {/* <script type="text/javascript">
   (function($) {
     window.fnames = new Array();
@@ -142,6 +139,22 @@ const SubscribeToNews = () => {
       </p>
     </div>
   );
+};
+
+const MailchimpScript = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
+    document.head.appendChild(script);
+
+    // Cleanup function to remove the script when the component unmounts
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []); // Empty dependency array ensures that this effect runs once on mount
+
+  return null; // No need to render anything for this component
 };
 
 export default SubscribeToNews;

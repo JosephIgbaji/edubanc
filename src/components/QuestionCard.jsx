@@ -61,8 +61,10 @@ const QuestionCard = ({ que, ans, lists }) => {
           {ans}
           <ul>
             {lists
-              ? lists.map((list) => (
-                  <li className="list-disc pl-3 ml-5">{list}</li>
+              ? lists.map((list, index) => (
+                  <li key={index} className="list-disc pl-3 ml-5">
+                    {list}
+                  </li>
                 ))
               : ""}
           </ul>
