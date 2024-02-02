@@ -19,29 +19,29 @@ const OurBlog = () => {
       </div>
       <h2 className="text-3xl font-bold mb-1">Latest, Educative Capivating</h2>
       <p className="text-textGray mb-4 text-sm max-w-[600px]">
-        Keep up to date with our informative and educational log
+        Keep up to date with our informative and educational blog
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <Link href="/blog/relevanceofeducation">
           <HomeBlogCard
-            image="/blog-api-stack.jpeg"
-            heading="Building your API Stack"
-            post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
+            heading="RELEVANCE OF EDUCATION"
+            post="In a rapidly evolving world, education stands as the cornerstone of personal and societal development, and as we embrace the digital age, the landscape of education is changing."
+            image="/blog-1.jpeg"
           />
         </Link>
         <Link href="/blog/educationforall">
           <HomeBlogCard
-            image="/blog-api-stack.jpeg"
-            heading="Building your API Stack"
-            post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
+            heading="EDUCATION FOR ALL"
+            post="Access to quality education is the right of every Nigerian. However, several factors can challenge individuals' access to quality education"
+            image="/blog-2.jpeg"
           />
         </Link>
         <Link href="/blog/relevanceoftechnology">
           <HomeBlogCard
+            heading="RELEVANCE OF TECHNOLOGY "
+            post="With the current trend in education, learning is being revolutionized. All thanks to the increase in the development of technology."
             image="/blog-api-stack.jpeg"
-            heading="Building your API Stack"
-            post="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
           />
         </Link>
       </div>

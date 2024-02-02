@@ -116,7 +116,7 @@ const NavProductMobile = ({ onclick }) => {
             </svg>
           }
           soon
-          heading="PayFlex"
+          heading="AcademyPay"
         />
       </Link>
     </div>

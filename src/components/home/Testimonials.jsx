@@ -18,9 +18,7 @@ const Testimonials = () => {
         <p>Testimonials</p>
       </div>
       <h2 className="text-3xl font-bold mb-1">Our Customer&apos;s Feedback</h2>
-      <p className="text-textGray mb-4 text-sm max-w-[600px] ">
-        Don&apos;t take our word for it. Trust our customers
-      </p>
+      <p className="text-textGray mb-4 text-sm max-w-[600px] "></p>
       {/* <div className="flex gap-5 w-full overflow-x-scroll scroll-smooth"> */}
       {/* <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"> */}
       <Marquee>

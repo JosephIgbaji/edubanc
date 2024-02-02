@@ -20,7 +20,7 @@ const OurProduct = () => {
         <h2 className="text-3xl font-bold mb-6">Easy, Empowering, Global</h2>
         <p className="text-textGray mb-16 text-sm max-w-[600px]">
           Discover a spectrum of financial services, training programs, and
-          welfare-enhancing packages that redefine how education is experienced
+          welfare-enhancing packages that redefines how education is experienced
           and delivered.
         </p>
       </div>
@@ -63,7 +63,7 @@ const OurProduct = () => {
             </svg>
           }
           title="Edpay"
-          details="Keep your child in school by accessing quicker flexible monthly tuition payment option"
+          details="Keep your child in school by accessing quicker flexible monthly tuition payment option."
           color="#426AF2"
         />
         <ProductCard
@@ -90,7 +90,7 @@ const OurProduct = () => {
             </svg>
           }
           title="CertifyCollegePay"
-          details="Your gateway to professional certification and tertiary seamless tuition payment"
+          details="Your gateway to professional certification and tertiary seamless tuition payment."
           color="#297373"
         />
         <ProductCard
@@ -158,7 +158,7 @@ const OurProduct = () => {
             </svg>
           }
           title="Payflex"
-          details="Designed to empower teachers and school administrators with a payroll loan option"
+          details="Designed to empower teachers and school administrators with a payroll loan option."
           color="#F99247"
         />
         <ProductCard
@@ -185,7 +185,7 @@ const OurProduct = () => {
             </svg>
           }
           title="AcademyPay"
-          details="AcademyPay, coming soon, is your school's answer to working capital needs"
+          details="AcademyPay, coming soon, is your school's answer to working capital needs."
           color="#DB353A"
         />
         <ProductCard
@@ -212,7 +212,7 @@ const OurProduct = () => {
             </svg>
           }
           title="Edfinder"
-          details="Stay tuned for this valuable tool that ensures your child's aspirations are protected."
+          details="Stay tuned for the seamless school search product with embedded finance. This enables parents to search for schools closest to their vicinity."
           color="#9747FF"
         />
       </div>

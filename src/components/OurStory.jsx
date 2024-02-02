@@ -20,18 +20,11 @@ const OurStory = () => {
           Empowering Education Ecosystems
         </h2>
         <p>
-          Education remains the cornerstone for every meaningful and sustainable
-          nation-building, and should be top-priority for any society that aims
-          to prosper and secure a future for its younger generations. In the
-          world of today, education is recognized as an important ingredient in
-          achieving scientific, technological and socio-economic development for
-          any nation. We have created an education hub that helps foster
-          close-knit relationships amongst key stakeholders in the education
-          sector. We recognise the benefit that collaboration brings in solving
-          tough problems, so Edubanc is here to facilitate connections that
-          strengthen collaboration. Whether you are a school owner,
-          administrator, teacher or student there is something on Edubanc to
-          make your contributions more meaningful. Together, we can!
+          Education is vital for nation-building and socio-economic development.
+          Edubanc facilitates collaboration among key education stakeholders to
+          solve challenges and enhance contributions. Whether you&apos;re a
+          school owner, administrator, teacher, or student, Edubanc has
+          something to make your impact more meaningful.
         </p>
       </div>
     </div>

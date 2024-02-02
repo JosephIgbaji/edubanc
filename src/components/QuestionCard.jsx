@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const QuestionCard = ({ que, ans }) => {
+const QuestionCard = ({ que, ans, lists }) => {
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
@@ -56,7 +56,18 @@ const QuestionCard = ({ que, ans }) => {
           )}
         </div>
       </div>
-      {show && <p className="text-textGray">{ans}</p>}
+      {show && (
+        <p className="text-textGray">
+          {ans}
+          <ul>
+            {lists
+              ? lists.map((list) => (
+                  <li className="list-disc pl-3 ml-5">{list}</li>
+                ))
+              : ""}
+          </ul>
+        </p>
+      )}
     </div>
   );
 };

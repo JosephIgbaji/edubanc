@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="px-5  pt-16 sm:px-32 mx-auto bg-[#F9FAFB;]">
       <AboutHero />
-      <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-32">
+      {/* <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-32">
         <ReadyCard
           icon={
             <svg
@@ -125,15 +125,16 @@ const About = () => {
           heading="Educational Visionaries"
           details="At Edubanc, we're pioneering a fresh educational approach that meets the demands of the 21st century."
         />
-      </div>
+      </div> */}
+      <div className="my-32"></div>
       <OurStory />
       {/* <div className="h-80 w-80 bg-gradient-to-br from-blue-700 to-stone-50"></div> */}
       <OurProduct />
       <WhyUs />
       <Testimonials />
-      <div className="flex gap-10 justify-between flex-col md:flex-row mt-32 ">
+      {/* <div className="flex gap-10 justify-between flex-col md:flex-row mt-32 ">
         <div className="rounded-3xl p-10 md:w-5/12 h-[240px] bg-gradient-to-br from-emerald-600 to-stone-50 relative overflow-hidden">
-          {/* <div className="rounded-3xl md:w-5/12 h-[240px] bg-[url('https://placekitten.com/1400')] bg-cover bg-center relative overflow-hidden"> */}
+         
           <div>
             <svg
               width="22"
@@ -209,7 +210,7 @@ const About = () => {
             alt="alt"
           />
         </div>
-      </div>
+      </div> */}
       <div className="mb-32">
         <Questions />
       </div>

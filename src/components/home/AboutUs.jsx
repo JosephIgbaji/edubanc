@@ -50,9 +50,9 @@ const About = () => {
               <div>
                 <h2 className="text-lg font-semibold mb-3">Our Mission</h2>
                 <p>
-                  We aim at been the best digital platform which addresses
+                  We aim at being the best digital platform which addresses
                   leveraging technology and fostering partnerships to promote
-                  access to quality education
+                  access to quality education.
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ const About = () => {
                 </g>
               </svg>
             }
-            title="Study Abroad With Edubac"
+            title="Study at Edubanc"
           />
         </div>
         <div className="absolute bottom-20 -left-8">

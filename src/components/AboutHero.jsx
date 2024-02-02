@@ -9,12 +9,11 @@ const AboutHero = () => {
           Committed to <br /> quality education
         </h2>
         <p>
-          The global education demands of the 21st century require a new
-          approach to education, one that fully prepares students for the
-          fast-paced and innovative world we are in today. At Edubanc, we are on
-          a mission to holistically address the challenges of the Nigerian
-          Education System by solving real problems impeding learning, teaching
-          and innovation. Join our BIG PICTURE EDUCATION mission.
+          With continuous development in the education sector, Edubanc is
+          committed to addressing challenges within the Nigerian Education
+          System, overcoming obstacles to learning, teaching, tuition financing
+          and innovation. Join our mission for holistic education - the BIG
+          PICTURE. Together we can!
         </p>
       </div>
       <div className="w-[300px] ">

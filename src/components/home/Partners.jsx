@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Partners = () => {
   return (
@@ -39,6 +40,9 @@ const Partners = () => {
               </clipPath>
             </defs>
           </svg>
+        </div>
+        <div>
+          <Image src="/lbs-logo.png" width={100} height={50} alt="lbs-logo" />
         </div>
         <div>
           <svg

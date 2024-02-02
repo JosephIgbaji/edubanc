@@ -10,8 +10,8 @@ const Questions = () => {
     <div className="mt-32 flex justify-between md:flex-row flex-col">
       <div className="w-[300px] md:w-[350px] sm:w-[500px] lg:w-[600px] mb-5">
         <h2 className="text-xl md:text-3xl sm:text-left font-bold mb-1">
-          Have some questions you&apos;d like answered? Here are the answers to
-          some frequently asked
+          Do you have questions that need answers? Here are responses to
+          commonly asked questions.
         </h2>
         <Link href="/faqs">
           <ButtonPrimary name="View more frequently asked questions" />
@@ -23,7 +23,12 @@ const Questions = () => {
             (ques) => ques.category === "edubanc" && faqs.indexOf(ques) < 5
           )
           .map((ques, index) => (
-            <QuestionCard key={index} que={ques.question} ans={ques.answer} />
+            <QuestionCard
+              key={index}
+              que={ques.question}
+              ans={ques.answer}
+              lists={ques.lists}
+            />
           ))}
       </div>
     </div>

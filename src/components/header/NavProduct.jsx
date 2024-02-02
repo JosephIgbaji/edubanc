@@ -32,7 +32,7 @@ const NavProduct = () => {
             </svg>
           }
           heading="EdPay"
-          details="Keep your child in school by accessing quicker and cheaper school fees loan."
+          details="Keep your child in school by accessing quicker flexible monthly tuition payment option."
         />
       </Link>
       <Link href="/products/certifycollegepay">
@@ -59,7 +59,7 @@ const NavProduct = () => {
             </svg>
           }
           heading="CertifyCollegePay"
-          details="Your gateway to professional certification and tertiary tuition financing"
+          details="Your gateway to professional certification and tertiary seamless tuition payment."
         />
       </Link>
       <Link href="/products/tuitionfinance">
@@ -118,7 +118,7 @@ const NavProduct = () => {
           </svg>
         }
         soon
-        heading="PayFlex"
+        heading="AcademyPay"
         details="Designed to empower teachers and school administrators with a payroll loan option"
       />
     </div>

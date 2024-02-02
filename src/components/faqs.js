@@ -8,26 +8,39 @@ const faqs = [
   {
     question: "What are the objectives of Edubanc? ",
     answer:
-      "To increase the number of children in School, improve educational infrastructures, improve the quality of teachers and create conducive learning environment. ",
+      "To increase the number of learners in School, improve educational infrastructures, improve the quality of teachers and create conducive learning environment. ",
     category: "edubanc",
   },
   {
     question: "What is Edubanc offering?",
     answer:
-      "Edubanc is focused on improving the quality and standard of education in Nigeria by: Providing financial services to Stakeholders (Grants, Investment opportunities, etc.) Organising of training programs for Teachers, towards capacity building. Provision of welfare-enhancing packages for stakeholders. ",
+      "Edubanc is focused on improving the quality and standard of education in Nigeria by: Providing financial services to Stakeholders, Organising of training programs for Teachers, towards capacity building. Provision of welfare-enhancing packages for stakeholders.",
     category: "edubanc",
   },
   {
     question: "What products are available under Edubanc? ",
-    answer:
-      "There are lot of amazing products/offering on Edubanc, these include: TEACHERS TRAINING - A free online learning platform that avail all Nigeria teachers the opportunity to acquire soft skills and also have access to a preparatory training for TRCN (Teachers Registration Council of Nigeria) certification. This program is done in partnership with 1million teachers (1MT) EDINVEST - An investment platform that allows you earn attractive interest on your investment while availing you an opportunity to contribute to an improved education system in Nigeria. EDPAY - A lending platform that offers finance to Parents/Guardians solely for the purpose of school fee payment for Students. EDCLUB - A target savings product that allows you save for a minimum of 3 months with the benefit of personal loan of up to 200% of total savings, and an alternative access asset financing. ALTMALL - An e-commerce platform that enables you purchase items of your choice online with an opportunity for a convenient repayment plan. ",
+    answer: "There are lot of amazing products/offering on Edubanc.",
     category: "edubanc",
+    lists: [
+      "EDPAY - Keep your child in school by accessing quicker flexible monthly tuition payment option.",
+      "CERTIFY COLLEGE PAY - Your gateway to professional certification and tertiary seamless tuition payment.",
+      "STUDY ABROAD - Explore the world of education through Edubanc's foreign tuition financing options.",
+      "PAYFLEX - Designed to empower teachers and school administrators with a payroll loan option.",
+      "ACADEMY PAY - AcademyPay, coming soon, is your school's answer to working capital needs.",
+      "EDFINDER - Stay tuned for the seamless school search product with embedded finance. This enables parents to search for schools closest to their vicinity.",
+    ],
   },
   {
     question: "Who can benefit from Edubanc? ",
-    answer:
-      "All stakeholders in the Education Sector (Schools, School Owners/Administrators, Academic & Non-Academic Staff, Parents/Guardians). ",
+    answer: "All stakeholders in the Education Sector.",
     category: "edubanc",
+    lists: [
+      "Schools",
+      "School Owners/Administrators",
+      "Academic",
+      "Non-Academic Staff",
+      "Parents/Guardians",
+    ],
   },
   {
     question: "How can I be a part of Edubanc? ",

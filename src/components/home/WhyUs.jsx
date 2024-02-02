@@ -6,9 +6,7 @@ const WhyUs = () => {
   return (
     <div className="mt-32 flex justify-between gap-5 flex-col md:flex-row">
       <div className="max-w-[350px] mb-5">
-        <h2 className="text-3xl sm:text-left font-bold mb-1">
-          Why you should use Edubanc
-        </h2>
+        <h2 className="text-3xl sm:text-left font-bold mb-1">Why Edubanc</h2>
         <p className="text-textGray mb-4 text-sm max-w-[600px] sm:text-left">
           We&apos;re not just about words, we take action. Edubanc tackles the
           genuine obstacles in Nigerian education, from learning barriers to
@@ -79,7 +77,7 @@ const WhyUs = () => {
             </svg>
           }
           heading="Elevating Teaching Standards"
-          details="We offer digitized training programs for teachers, focusing on capacity building."
+          details="We offer free digitized teachers training focused on capacity building."
         />
         <ReasonsCard
           icon={

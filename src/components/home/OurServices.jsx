@@ -63,7 +63,7 @@ const OurServices = () => {
           }
           color="#426AF2"
           heading="Value Distribution Services"
-          details="Unlock value distribution with our trusted services"
+          details="Unlock value distribution with our trusted services."
         />
         <ServicesCard
           soon
@@ -98,7 +98,7 @@ const OurServices = () => {
           }
           color="#426AF2"
           heading="Lending API distribution services"
-          details="Experience the power of lending APIs with our distribution services"
+          details="Experience the power of lending APIs with our distribution services."
         />
       </div>
     </div>
