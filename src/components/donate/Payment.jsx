@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { Josefin_Sans } from "next/font/google";
 
 const Payment = () => {
   const [paymentOption, setPaymentOption] = useState("card");
@@ -62,37 +62,77 @@ const Payment = () => {
 export default Payment;
 
 const CardPayment = () => {
+  const [fullName, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const handlePayment = (e) => {
+    e.preventDefault();
+
+    if (fullName && email && amount) {
+      // console.log(process.env.SECRET_KEY);
+      fetch("https://api.paystack.co/transaction/initialize", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization:
+            "Bearer sk_test_8594bc0cbb049e449d98a5cc83bee668c95c8a4e",
+        },
+        body: JSON.stringify({
+          email,
+          amount: amount * 100,
+          callback_url: "https://edubanc-malenxe.vercel.app",
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          window.location.href = data.data.authorization_url;
+        });
+
+      // console.log(fullName, email, amount);
+      setFullname("");
+      setEmail("");
+      setAmount("");
+    }
+  };
+
   return (
     <div className="mt-5">
-      <div className="mb-5 flex flex-col text-gray-200 text-sm">
-        <label>Full Name</label>
-        <input
-          className="rounded-lg p-3 bg-blue-600"
-          type="text"
-          placeholder="Enter your full name"
-        />
-      </div>
-      <div className="mb-5 flex flex-col text-gray-200 text-sm">
-        <label>Email</label>
-        <input
-          className="rounded-lg p-3 bg-blue-600"
-          type="email"
-          placeholder="Enter your email"
-        />
-      </div>
-      <div className="mb-5 flex flex-col text-gray-200 text-sm">
-        <label>Amount</label>
-        <input
-          className="rounded-lg p-3 bg-blue-600"
-          type="text"
-          placeholder="Enter amount you want to donate"
-        />
-      </div>
-      <Link href="/">
-        <p className="bg-black rounded-lg p-4 text-white text-center">
+      <form onSubmit={handlePayment}>
+        <div className="mb-5 flex flex-col text-gray-200 text-sm">
+          <label>Full Name</label>
+          <input
+            className="rounded-lg p-3 bg-blue-600"
+            type="text"
+            placeholder="Enter your full name"
+            value={fullName}
+            onChange={(e) => setFullname(e.target.value)}
+          />
+        </div>
+        <div className="mb-5 flex flex-col text-gray-200 text-sm">
+          <label>Email</label>
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="rounded-lg p-3 bg-blue-600"
+            type="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div className="mb-5 flex flex-col text-gray-200 text-sm">
+          <label>Amount</label>
+          <input
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            className="rounded-lg p-3 bg-blue-600"
+            type="text"
+            placeholder="Enter amount you want to donate"
+          />
+        </div>
+        <button className="bg-black hover:cursor-pointer rounded-lg p-4 text-white text-center w-full">
           Donate with card
-        </p>
-      </Link>
+        </button>
+      </form>
     </div>
   );
 };
