@@ -71,6 +71,7 @@ const FAQMain = () => {
                   key={index}
                   que={ques.question}
                   ans={ques.answer}
+                  lists={ques.lists}
                 />
               ))}
           </div>
