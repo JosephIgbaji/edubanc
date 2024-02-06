@@ -5,7 +5,7 @@ import OurBlog from "@/components/home/OurBlog";
 import OurProduct from "@/components/home/OurProduct";
 import OurServices from "@/components/home/OurServices";
 import Partners from "@/components/home/Partners";
-import Testimonials from "./../components/home/Testimonials";
+import Testimonials from "../../components/home/Testimonials";
 import Image from "next/image";
 import WhyUs from "@/components/home/WhyUs";
 import Questions from "@/components/home/Questions";
