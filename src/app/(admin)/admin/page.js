@@ -1,13 +1,13 @@
 "use client";
 import BlogTable from "@/components/admin/BlogTable";
 import ComponentsHeader from "@/components/admin/ComponentsHeader";
-import Login from "@/components/admin/login";
+import Login from "@/components/admin/Login";
 import React, { useState } from "react";
 import TextEditor from "@/components/admin/TextEditor";
 import TestimonialTable from "@/components/admin/TestimonialTable";
 
 const AdminPortal = () => {
-  const [signIn, setSignIn] = useState(true);
+  const [signIn, setSignIn] = useState(false);
   const [category, setCategory] = useState("blog");
   const [showBlogEditor, setShowBlogEditor] = useState(false);
   const [showTestimonialEditor, setShowTestimonialEditor] = useState(false);
