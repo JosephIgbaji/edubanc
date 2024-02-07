@@ -1,9 +1,6 @@
-"use client";
-import React, { useState } from "react";
-
 // import BlogTable from "@/components/admin/BlogTable";
 // import ComponentsHeader from "@/components/admin/ComponentsHeader";
-import Login from "@/components/admin/Login";
+
 // import TextEditor from "@/components/admin/TextEditor";
 // import TestimonialTable from "@/components/admin/TestimonialTable";
 // import TestimonialEditor from "@/components/admin/TestomonialEditor";
@@ -95,6 +92,10 @@ import Login from "@/components/admin/Login";
 //     </div>
 //   );
 // }
+
+"use client";
+import React, { useState } from "react";
+import Login from "@/components/admin/Login";
 
 const page = () => {
   const [signIn, setSignIn] = useState(true);
