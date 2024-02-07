@@ -2,21 +2,38 @@
 import React, { useEffect, useState } from "react";
 import AboutModal from "./AboutModal";
 
-const RenderAboutModal = () => {
-  const [show, setShow] = useState(false);
+export function RenderAboutModal() {
+  const [showComponent, setShowComponent] = useState(false);
 
   useEffect(() => {
-    setShow(true);
+    const timeout = setTimeout(() => {
+      setShowComponent(true);
+    }, 1 * 30 * 1000); // 30 seconds in milliseconds
+
+    return () => clearTimeout(timeout);
   }, []);
 
   const handleClose = () => {
-    setShow(false);
+    setShowComponent(false);
   };
-  return (
-    <div className="w-[100%] absolute left-0 z-10">
-      {show && <AboutModal onclick={handleClose} />}
-    </div>
-  );
-};
 
-export default RenderAboutModal;
+  return <div>{showComponent && <AboutModal onclick={handleClose} />}</div>;
+}
+
+export function RenderQuestionModal() {
+  const [showComponent, setShowComponent] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowComponent(true);
+    }, 1 * 30 * 1000); // 30 seconds in milliseconds
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleClose = () => {
+    setShowComponent(false);
+  };
+
+  return <div>{showComponent && <AboutModal onclick={handleClose} />}</div>;
+}

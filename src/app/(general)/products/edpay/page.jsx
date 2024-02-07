@@ -1,12 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import EdpayFAQ from "./EdpayFAQ";
 import EdServices from "./EdServices";
 import ReadyCard from "@/components/ReadyCard";
 import EdpayPaving from "@/components/products/EdpayPaving";
 import ProductHero from "@/components/products/ProductHero";
+import ButtonPrimary from "@/components/ButtonPrimary";
+import QuestionModal from "@/components/QuestionModal";
 
 const EdpayHome = () => {
+  const [showComponent, setShowComponent] = useState(false);
+
+  const handleShow = () => {
+    setShowComponent(!showComponent);
+  };
+
   return (
     <div className="pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
       <ProductHero
@@ -126,6 +135,16 @@ const EdpayHome = () => {
       <div className="hidden md:block">
         <EdpayFAQ />
       </div>
+      {showComponent && (
+        <div className="fixed top-[25%] right-0 z-10">
+          <QuestionModal onclose={handleShow} />
+        </div>
+      )}
+      {!showComponent && (
+        <div onClick={handleShow} className="fixed bottom-[30%] right-0 z-10">
+          <ButtonPrimary name={"Got any question for us"} />
+        </div>
+      )}
     </div>
   );
 };

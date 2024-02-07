@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import RenderAboutModal from "@/components/Render";
+import { RenderAboutModal } from "@/components/Render";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <main className="relative">
-          <RenderAboutModal />
+          <div className="w-[100%] fixed z-10">
+            <RenderAboutModal />
+          </div>
           <Header />
           {children}
           <Footer />

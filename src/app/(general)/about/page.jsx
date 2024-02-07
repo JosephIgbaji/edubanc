@@ -1,3 +1,5 @@
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import AboutHero from "@/components/AboutHero";
 import OurStory from "@/components/OurStory";
@@ -6,9 +8,15 @@ import OurProduct from "@/components/home/OurProduct";
 import Questions from "@/components/home/Questions";
 import Testimonials from "@/components/home/Testimonials";
 import WhyUs from "@/components/home/WhyUs";
-import React from "react";
+import ButtonPrimary from "@/components/ButtonPrimary";
+import QuestionModal from "@/components/QuestionModal";
 
 const About = () => {
+  const [showComponent, setShowComponent] = useState(false);
+
+  const handleShow = () => {
+    setShowComponent(!showComponent);
+  };
   return (
     <div className="px-5  pt-16 sm:px-32 mx-auto bg-[#F9FAFB;]">
       <AboutHero />
@@ -214,6 +222,16 @@ const About = () => {
       <div className="mb-32">
         <Questions />
       </div>
+      {showComponent && (
+        <div className="fixed top-[25%] right-0 z-10">
+          <QuestionModal onclose={handleShow} />
+        </div>
+      )}
+      {!showComponent && (
+        <div onClick={handleShow} className="fixed bottom-[30%] right-0 z-10">
+          <ButtonPrimary name={"Got any question for us"} />
+        </div>
+      )}
     </div>
   );
 };

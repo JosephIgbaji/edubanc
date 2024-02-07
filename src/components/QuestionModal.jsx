@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const QuestionModal = () => {
+const QuestionModal = ({ onclose }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -8,6 +8,7 @@ const QuestionModal = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    onclose();
     const response = await fetch("https://formspree.io/f/xqkrergr", {
       method: "POST",
       headers: {
@@ -24,11 +25,11 @@ const QuestionModal = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center">
+    <div className="w-auto flex items-center justify-center">
       <div className="bg-white relative mx-auto rounded-3xl border p-3 md:p-5 max-w-screen-sm">
         <p
           className="bg-gray-700 h-5 w-5 absolute top-1 right-5 rounded-full text-white text-lg flex items-center justify-center cursor-pointer"
-          onClick={() => {}}
+          onClick={onclose}
         >
           <span>x</span>
         </p>
@@ -86,7 +87,7 @@ const QuestionModal = () => {
             </div>
             <div className="test-center">
               <input
-                className="w-full rounded-xl bg-primary p-4 text-white"
+                className="w-full rounded-xl cursor-pointer bg-primary p-4 text-white"
                 type="submit"
                 value="Submit"
               />

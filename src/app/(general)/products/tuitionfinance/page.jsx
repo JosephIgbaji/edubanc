@@ -1,14 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ButtonPrimary from "@/components/ButtonPrimary";
 
 import ReadyCard from "@/components/ReadyCard";
 import EdServices from "../edpay/EdServices";
 import ProductHero from "@/components/products/ProductHero";
 import TuitionServices from "./TuitionServices";
+import ButtonPrimary from "@/components/ButtonPrimary";
+import QuestionModal from "@/components/QuestionModal";
 
 const TuitionFinance = () => {
+  const [showComponent, setShowComponent] = useState(false);
+
+  const handleShow = () => {
+    setShowComponent(!showComponent);
+  };
   return (
     <div className="pt-20 pb-32 px-5 sm:px-32 mx-auto bg-[#F9FAFB]">
       <ProductHero
@@ -141,6 +148,16 @@ const TuitionFinance = () => {
           height={100}
         />
       </div>
+      {showComponent && (
+        <div className="fixed top-[25%] right-0 z-10">
+          <QuestionModal onclose={handleShow} />
+        </div>
+      )}
+      {!showComponent && (
+        <div onClick={handleShow} className="fixed bottom-[30%] right-0 z-10">
+          <ButtonPrimary name={"Got any question for us"} />
+        </div>
+      )}
     </div>
   );
 };

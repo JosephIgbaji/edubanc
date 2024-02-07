@@ -1,13 +1,14 @@
 "use client";
+import React, { useState } from "react";
+
 import BlogTable from "@/components/admin/BlogTable";
 import ComponentsHeader from "@/components/admin/ComponentsHeader";
 import Login from "@/components/admin/Login";
-import React, { useState } from "react";
 import TextEditor from "@/components/admin/TextEditor";
 import TestimonialTable from "@/components/admin/TestimonialTable";
 import TestimonialEditor from "@/components/admin/TestomonialEditor";
 
-const AdminPortal = () => {
+export default function Home() {
   const [signIn, setSignIn] = useState(true);
   const [category, setCategory] = useState("blog");
   const [showBlogEditor, setShowBlogEditor] = useState(false);
@@ -93,6 +94,4 @@ const AdminPortal = () => {
       )}
     </div>
   );
-};
-
-export default AdminPortal;
+}
