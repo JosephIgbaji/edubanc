@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import Login from "@/components/admin/Login";
 
-// import BlogTable from "@/components/admin/BlogTable";
+import BlogTable from "@/components/admin/BlogTable";
 import ComponentsHeader from "@/components/admin/ComponentsHeader";
 
 // import TextEditor from "@/components/admin/TextEditor";
-// import TestimonialTable from "@/components/admin/TestimonialTable";
+import TestimonialTable from "@/components/admin/TestimonialTable";
 // import TestimonialEditor from "@/components/admin/TestomonialEditor";
 
 // export default function Home() {
@@ -112,8 +112,8 @@ const Page = () => {
             <button
               onClick={() => {
                 setCategory("blog");
-                // setShowBlogEditor(false);
-                // setShowTestimonialEditor(false);
+                setShowBlogEditor(false);
+                setShowTestimonialEditor(false);
               }}
               className={category === "blog" ? activeStyle : style}
             >
@@ -122,8 +122,8 @@ const Page = () => {
             <button
               onClick={() => {
                 setCategory("testimonials");
-                // setShowBlogEditor(false);
-                // setShowTestimonialEditor(false);
+                setShowBlogEditor(false);
+                setShowTestimonialEditor(false);
               }}
               className={category !== "blog" ? activeStyle : style}
             >
@@ -136,6 +136,20 @@ const Page = () => {
                 category === "blog" ? componentsObject[0] : componentsObject[1]
               }
             />
+            {!showBlogEditor && category === "blog" && <BlogTable />}
+            {!showTestimonialEditor && category !== "blog" && (
+              <TestimonialTable />
+            )}
+            {showBlogEditor && (
+              <div className="absolute lg:w-[90%]">
+                <TextEditor />
+              </div>
+            )}
+            {showTestimonialEditor && (
+              <div className="absolute lg:w-[90%]">
+                <TestimonialEditor />
+              </div>
+            )}
           </div>
         </div>
       )}
