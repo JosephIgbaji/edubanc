@@ -42,56 +42,57 @@ export default function Home() {
   const style = "rounded-lg w-full border p-3 block mb-5";
   const activeStyle = style + " bg-gray-300 font-bold";
   return (
-    <div>
-      {!signIn ? (
-        <Login />
-      ) : (
-        <div className="lg:h-screen lg:grid lg:grid-cols-[250px_auto]">
-          <div className="bg-blue-100 bg-opacity-50 px-4 lg:pt-20">
-            <button
-              onClick={() => {
-                setCategory("blog");
-                setShowBlogEditor(false);
-                setShowTestimonialEditor(false);
-              }}
-              className={category === "blog" ? activeStyle : style}
-            >
-              Blog
-            </button>
-            <button
-              onClick={() => {
-                setCategory("testimonials");
-                setShowBlogEditor(false);
-                setShowTestimonialEditor(false);
-              }}
-              className={category !== "blog" ? activeStyle : style}
-            >
-              Testimonials
-            </button>
-          </div>
-          <div className="relative px-10 pt-10">
-            <ComponentsHeader
-              headers={
-                category === "blog" ? componentsObject[0] : componentsObject[1]
-              }
-            />
-            {!showBlogEditor && category === "blog" && <BlogTable />}
-            {!showTestimonialEditor && category !== "blog" && (
-              <TestimonialTable />
-            )}
-            {showBlogEditor && (
-              <div className="absolute lg:w-[90%]">
-                <TextEditor />
-              </div>
-            )}
-            {showTestimonialEditor && (
-              <div className="absolute lg:w-[90%]">
-                <TestimonialEditor />
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
+    // <div>
+    //   {!signIn ? (
+    //     <Login />
+    //   ) : (
+    //     <div className="lg:h-screen lg:grid lg:grid-cols-[250px_auto]">
+    //       <div className="bg-blue-100 bg-opacity-50 px-4 lg:pt-20">
+    //         <button
+    //           onClick={() => {
+    //             setCategory("blog");
+    //             setShowBlogEditor(false);
+    //             setShowTestimonialEditor(false);
+    //           }}
+    //           className={category === "blog" ? activeStyle : style}
+    //         >
+    //           Blog
+    //         </button>
+    //         <button
+    //           onClick={() => {
+    //             setCategory("testimonials");
+    //             setShowBlogEditor(false);
+    //             setShowTestimonialEditor(false);
+    //           }}
+    //           className={category !== "blog" ? activeStyle : style}
+    //         >
+    //           Testimonials
+    //         </button>
+    //       </div>
+    //       <div className="relative px-10 pt-10">
+    //         <ComponentsHeader
+    //           headers={
+    //             category === "blog" ? componentsObject[0] : componentsObject[1]
+    //           }
+    //         />
+    //         {!showBlogEditor && category === "blog" && <BlogTable />}
+    //         {!showTestimonialEditor && category !== "blog" && (
+    //           <TestimonialTable />
+    //         )}
+    //         {showBlogEditor && (
+    //           <div className="absolute lg:w-[90%]">
+    //             <TextEditor />
+    //           </div>
+    //         )}
+    //         {showTestimonialEditor && (
+    //           <div className="absolute lg:w-[90%]">
+    //             <TestimonialEditor />
+    //           </div>
+    //         )}
+    //       </div>
+    //     </div>
+    //   )}
+    // </div>
+    <div>Done Test</div>
   );
 }
