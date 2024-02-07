@@ -1,9 +1,9 @@
-// "use client";
-// import React, { useState } from "react";
+"use client";
+import React, { useState } from "react";
 
 // import BlogTable from "@/components/admin/BlogTable";
 // import ComponentsHeader from "@/components/admin/ComponentsHeader";
-// import Login from "@/components/admin/Login";
+import Login from "@/components/admin/Login";
 // import TextEditor from "@/components/admin/TextEditor";
 // import TestimonialTable from "@/components/admin/TestimonialTable";
 // import TestimonialEditor from "@/components/admin/TestomonialEditor";
@@ -96,10 +96,14 @@
 //   );
 // }
 
-import React from "react";
-
 const page = () => {
-  return <div>Jesus is Lord</div>;
+  const [signIn, setSignIn] = useState(true);
+
+  return (
+    <div>
+      <Login />
+    </div>
+  );
 };
 
 export default page;
