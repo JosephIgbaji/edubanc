@@ -1,3 +1,7 @@
+"use client";
+import React, { useState } from "react";
+import Login from "@/components/admin/Login";
+
 // import BlogTable from "@/components/admin/BlogTable";
 // import ComponentsHeader from "@/components/admin/ComponentsHeader";
 
@@ -93,11 +97,7 @@
 //   );
 // }
 
-"use client";
-import React, { useState } from "react";
-import Login from "@/components/admin/Login";
-
-const page = () => {
+const Page = () => {
   const [signIn, setSignIn] = useState(true);
 
   return (
@@ -107,4 +107,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
