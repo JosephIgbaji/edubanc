@@ -11,7 +11,7 @@ import Login from "@/components/admin/Login";
 
 // export default function Home() {
 //   const [signIn, setSignIn] = useState(true);
-//   const [category, setCategory] = useState("blog");
+
 //   const [showBlogEditor, setShowBlogEditor] = useState(false);
 //   const [showTestimonialEditor, setShowTestimonialEditor] = useState(false);
 
@@ -99,10 +99,41 @@ import Login from "@/components/admin/Login";
 
 const Page = () => {
   const [signIn, setSignIn] = useState(true);
+  const [category, setCategory] = useState("blog");
+
+  const style = "rounded-lg w-full border p-3 block mb-5";
+  const activeStyle = style + " bg-gray-300 font-bold";
 
   return (
     <div>
-      <Login />
+      {!signIn ? (
+        <Login />
+      ) : (
+        <div className="lg:h-screen lg:grid lg:grid-cols-[250px_auto]">
+          <div className="bg-blue-100 bg-opacity-50 px-4 lg:pt-20">
+            <button
+              onClick={() => {
+                setCategory("blog");
+                // setShowBlogEditor(false);
+                // setShowTestimonialEditor(false);
+              }}
+              className={category === "blog" ? activeStyle : style}
+            >
+              Blog
+            </button>
+            <button
+              onClick={() => {
+                setCategory("testimonials");
+                // setShowBlogEditor(false);
+                // setShowTestimonialEditor(false);
+              }}
+              className={category !== "blog" ? activeStyle : style}
+            >
+              Testimonials
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
