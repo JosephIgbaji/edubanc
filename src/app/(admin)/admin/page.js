@@ -5,7 +5,7 @@ import Login from "@/components/admin/Login";
 import BlogTable from "@/components/admin/BlogTable";
 import ComponentsHeader from "@/components/admin/ComponentsHeader";
 
-// import TextEditor from "@/components/admin/TextEditor";
+import TextEditor from "@/components/admin/TextEditor";
 import TestimonialTable from "@/components/admin/TestimonialTable";
 // import TestimonialEditor from "@/components/admin/TestomonialEditor";
 
@@ -140,12 +140,12 @@ const Page = () => {
             {!showTestimonialEditor && category !== "blog" && (
               <TestimonialTable />
             )}
-            {/* {showBlogEditor && (
+            {showBlogEditor && (
               <div className="absolute lg:w-[90%]">
                 <TextEditor />
               </div>
             )}
-            {showTestimonialEditor && (
+            {/* {showTestimonialEditor && (
               <div className="absolute lg:w-[90%]">
                 <TestimonialEditor />
               </div>
