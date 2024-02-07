@@ -136,11 +136,11 @@ const Page = () => {
                 category === "blog" ? componentsObject[0] : componentsObject[1]
               }
             />
-            {/* {!showBlogEditor && category === "blog" && <BlogTable />}
+            {!showBlogEditor && category === "blog" && <BlogTable />}
             {!showTestimonialEditor && category !== "blog" && (
               <TestimonialTable />
             )}
-            {showBlogEditor && (
+            {/* {showBlogEditor && (
               <div className="absolute lg:w-[90%]">
                 <TextEditor />
               </div>
