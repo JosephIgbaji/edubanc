@@ -5,9 +5,10 @@ import Login from "@/components/admin/Login";
 import React, { useState } from "react";
 import TextEditor from "@/components/admin/TextEditor";
 import TestimonialTable from "@/components/admin/TestimonialTable";
+import TestimonialEditor from "@/components/admin/TestomonialEditor";
 
 const AdminPortal = () => {
-  const [signIn, setSignIn] = useState(false);
+  const [signIn, setSignIn] = useState(true);
   const [category, setCategory] = useState("blog");
   const [showBlogEditor, setShowBlogEditor] = useState(false);
   const [showTestimonialEditor, setShowTestimonialEditor] = useState(false);
@@ -50,6 +51,7 @@ const AdminPortal = () => {
               onClick={() => {
                 setCategory("blog");
                 setShowBlogEditor(false);
+                setShowTestimonialEditor(false);
               }}
               className={category === "blog" ? activeStyle : style}
             >
@@ -59,6 +61,7 @@ const AdminPortal = () => {
               onClick={() => {
                 setCategory("testimonials");
                 setShowBlogEditor(false);
+                setShowTestimonialEditor(false);
               }}
               className={category !== "blog" ? activeStyle : style}
             >
@@ -72,10 +75,17 @@ const AdminPortal = () => {
               }
             />
             {!showBlogEditor && category === "blog" && <BlogTable />}
-            {!showBlogEditor && category !== "blog" && <TestimonialTable />}
+            {!showTestimonialEditor && category !== "blog" && (
+              <TestimonialTable />
+            )}
             {showBlogEditor && (
               <div className="absolute lg:w-[90%]">
-                <TextEditor onclose={handleShowBlogEditor} />
+                <TextEditor />
+              </div>
+            )}
+            {showTestimonialEditor && (
+              <div className="absolute lg:w-[90%]">
+                <TestimonialEditor />
               </div>
             )}
           </div>

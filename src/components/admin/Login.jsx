@@ -22,7 +22,7 @@ const Login = () => {
             <label className="text-gray-600">Password</label>
             <input
               type="password"
-              placeholder=".........."
+              placeholder="*** ***"
               className="rounded-lg p-3 border"
             />
           </div>

@@ -14,7 +14,7 @@ import SubscribeToNews from "@/components/home/SubscribeToNews";
 
 export default function Home() {
   return (
-    <main className="px-5 sm:px-32 mx-auto bg-[#F9FAFB;]">
+    <main className="px-5 sm:px-32 mx-auto bg-[#F9FAFB;] overflow-x-hidden">
       <Carousel />
       <div className="flex items-center justify-center">
         <Partners />
@@ -25,7 +25,7 @@ export default function Home() {
       <OurBlog />
       <Testimonials />
       <WhyUs />
-      <div className="w-full mt-28 flex items-center justify-center">
+      <div className="w-[90%] mt-28 flex items-center justify-center">
         <Image
           src="/mobileSoon.png"
           alt="mobile app coming soon"

@@ -22,7 +22,10 @@ const ComponentsHeader = ({ headers }) => {
             <button className="p-2 border rounded-lg">Select Category</button>
           )}
         </div>
-        <input className="p-2 text-xs border rounded-lg" placeholder="Search" />
+        <input
+          className="p-2 text-xs border w-[200px] rounded-lg"
+          placeholder="Search"
+        />
       </div>
     </div>
   );

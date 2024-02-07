@@ -1,16 +1,18 @@
+"use client";
 import React, { useState } from "react";
 
-const AboutModal = () => {
+const AboutModal = ({ onclick }) => {
   const [channel, setChannel] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    onclick();
     const response = await fetch("https://formspree.io/f/xqkrergr", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({}),
+      body: JSON.stringify({ channel }),
     });
 
     if (response.ok) {
@@ -21,11 +23,11 @@ const AboutModal = () => {
   };
 
   return (
-    <div className="bg-gray-700 bg-opacity-30 w-screen h-screen flex items-center justify-center">
+    <div className="sticky bg-gray-700 bg-opacity-30 w-[100%] h-screen flex items-center justify-center">
       <div className="bg-white relative mx-auto rounded-3xl border p-3 md:p-5 max-w-screen-sm">
         <p
           className="bg-gray-700 h-5 w-5 absolute top-1 right-5 rounded-full text-white text-lg flex items-center justify-center cursor-pointer"
-          onClick={() => {}}
+          onClick={onclick}
         >
           <span>x</span>
         </p>
@@ -93,7 +95,7 @@ const AboutModal = () => {
             </div>
             <div className="text-center">
               <input
-                className="w-full rounded-xl bg-primary p-4 text-white"
+                className="w-full rounded-xl bg-primary p-4 text-white cursor-pointer"
                 type="submit"
                 value="Submit"
               />

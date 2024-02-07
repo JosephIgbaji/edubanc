@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 const SubscribeToNews = () => {
   return (
-    <div className="w-full mt-32 mb-32 text-center flex flex-col items-center justify-center">
+    <div className=" overflow-x-hidden mt-32 mb-32 text-center flex flex-col items-center justify-center">
       <h2 className="text-2xl font-semibold">
         &quot;Stay in the loop and be the first to know about exciting updates!
         Subscribe to our newsletter from Edubanc.&quot;
@@ -26,7 +26,7 @@ const SubscribeToNews = () => {
         {/* /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */}
         {/* </style> */}
-        <div id="mc_embed_signup">
+        <div id="mc_embed_signup" className="w-[400px]">
           <form
             action="https://edubanc.us14.list-manage.com/subscribe/post?u=8def29671dd01fe1a232b6fd6&amp;id=4d660e99ad&amp;f_id=00c998e0f0"
             method="post"
