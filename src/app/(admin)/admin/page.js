@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Login from "@/components/admin/Login";
 
 // import BlogTable from "@/components/admin/BlogTable";
-// import ComponentsHeader from "@/components/admin/ComponentsHeader";
+import ComponentsHeader from "@/components/admin/ComponentsHeader";
 
 // import TextEditor from "@/components/admin/TextEditor";
 // import TestimonialTable from "@/components/admin/TestimonialTable";
@@ -11,34 +11,6 @@ import Login from "@/components/admin/Login";
 
 // export default function Home() {
 //   const [signIn, setSignIn] = useState(true);
-
-//   const [showBlogEditor, setShowBlogEditor] = useState(false);
-//   const [showTestimonialEditor, setShowTestimonialEditor] = useState(false);
-
-//   const handleShowBlogEditor = () => {
-//     setShowBlogEditor(!showBlogEditor);
-//   };
-//   const handleShowTestimonialEditor = () => {
-//     setShowTestimonialEditor(!showTestimonialEditor);
-//   };
-
-//   const componentsObject = [
-//     {
-//       title: "Blog",
-//       add: "Add New Blog",
-//       general: "All Post",
-//       category: "Select Category",
-//       handleshow: handleShowBlogEditor,
-//       show: showBlogEditor,
-//     },
-//     {
-//       title: "Testimonials",
-//       add: "Add New Testimonial",
-//       general: "All Testimonials",
-//       handleshow: handleShowTestimonialEditor,
-//       show: showTestimonialEditor,
-//     },
-//   ];
 
 //   const style = "rounded-lg w-full border p-3 block mb-5";
 //   const activeStyle = style + " bg-gray-300 font-bold";
@@ -100,10 +72,36 @@ import Login from "@/components/admin/Login";
 const Page = () => {
   const [signIn, setSignIn] = useState(true);
   const [category, setCategory] = useState("blog");
+  const [showBlogEditor, setShowBlogEditor] = useState(false);
+  const [showTestimonialEditor, setShowTestimonialEditor] = useState(false);
 
   const style = "rounded-lg w-full border p-3 block mb-5";
   const activeStyle = style + " bg-gray-300 font-bold";
 
+  const handleShowBlogEditor = () => {
+    setShowBlogEditor(!showBlogEditor);
+  };
+  const handleShowTestimonialEditor = () => {
+    setShowTestimonialEditor(!showTestimonialEditor);
+  };
+
+  const componentsObject = [
+    {
+      title: "Blog",
+      add: "Add New Blog",
+      general: "All Post",
+      category: "Select Category",
+      handleshow: handleShowBlogEditor,
+      show: showBlogEditor,
+    },
+    {
+      title: "Testimonials",
+      add: "Add New Testimonial",
+      general: "All Testimonials",
+      handleshow: handleShowTestimonialEditor,
+      show: showTestimonialEditor,
+    },
+  ];
   return (
     <div>
       {!signIn ? (
@@ -131,6 +129,13 @@ const Page = () => {
             >
               Testimonials
             </button>
+          </div>
+          <div className="relative px-10 pt-10">
+            <ComponentsHeader
+              headers={
+                category === "blog" ? componentsObject[0] : componentsObject[1]
+              }
+            />
           </div>
         </div>
       )}
