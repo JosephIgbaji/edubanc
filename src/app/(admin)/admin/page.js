@@ -8,6 +8,7 @@ import ComponentsHeader from "@/components/admin/ComponentsHeader";
 // import TextEditor from "@/components/admin/TextEditor";
 import TestimonialTable from "@/components/admin/TestimonialTable";
 import TestimonialEditor from "@/components/admin/TestomonialEditor";
+import Loading from "../loading";
 
 // export default function Home() {
 //   const [signIn, setSignIn] = useState(true);
@@ -113,42 +114,54 @@ const Page = () => {
   const resolve = async () => {
     const resp = await fetch("/admin/user");
     const json = await resp.json();
-    if (resp.status == 200 && json?.status == 'success') {
+    if (resp.status == 200 && json?.status == "success") {
       setUser(json.data);
       setIsResolving(false);
     } else {
       setIsResolving(false);
     }
-  }
+  };
 
-  if (isResolving) return <div>Loading...</div>;
+  if (isResolving)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
 
   return (
     <div>
       {!signedIn ? (
-        <Login />
+        <>
+          <Login />
+        </>
       ) : (
         <div className="lg:h-screen lg:grid lg:grid-cols-[250px_auto]">
-          <div className="bg-blue-100 bg-opacity-50 px-4 lg:pt-20">
-            <button
-              onClick={() => {
-                setCategory("blog");
-                setShowBlogEditor(false);
-                setShowTestimonialEditor(false);
-              }}
-              className={category === "blog" ? activeStyle : style}
-            >
-              Blog
-            </button>
-            <button
-              onClick={() => {
-                setCategory("testimonials");
-                setShowBlogEditor(false);
-                setShowTestimonialEditor(false);
-              }}
-              className={category !== "blog" ? activeStyle : style}
-            >
-              Testimonials
+          <div className="bg-blue-100 bg-opacity-50 px-4 lg:pt-20 lg:flex flex-col justify-between pb-10">
+            <div>
+              <button
+                onClick={() => {
+                  setCategory("blog");
+                  setShowBlogEditor(false);
+                  setShowTestimonialEditor(false);
+                }}
+                className={category === "blog" ? activeStyle : style}
+              >
+                Blog
+              </button>
+              <button
+                onClick={() => {
+                  setCategory("testimonials");
+                  setShowBlogEditor(false);
+                  setShowTestimonialEditor(false);
+                }}
+                className={category !== "blog" ? activeStyle : style}
+              >
+                Testimonials
+              </button>
+            </div>
+            <button className="text-sm p-2 rounded-lg hover:bg-gray-300 hover:font-bold">
+              Log Out
             </button>
           </div>
           <div className="relative px-10 pt-10">

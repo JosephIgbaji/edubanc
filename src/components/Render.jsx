@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import AboutModal from "./AboutModal";
+import QuestionModal from "./QuestionModal";
 
 export function RenderAboutModal() {
   const [showComponent, setShowComponent] = useState(false);
@@ -23,15 +24,7 @@ export function RenderAboutModal() {
 export function RenderQuestionModal() {
   const [showComponent, setShowComponent] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowComponent(true);
-    }, 1 * 30 * 1000); // 30 seconds in milliseconds
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-  const handleClose = () => {
+  const handleShow = () => {
     setShowComponent(false);
   };
 

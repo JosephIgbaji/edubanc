@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const Login = () => {
-
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handlePayment = (e) => {
     e.preventDefault();
@@ -11,23 +11,27 @@ const Login = () => {
     if (email && pwd) {
       fetch("/admin/login", {
         method: "POST",
-        credentials:'include',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({email, pwd}),
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, pwd }),
       })
         .then((res) => res.json())
         .then((json) => {
-          if (json?.status == 'success') {
+          if (json?.status == "success") {
             window.location.reload();
           } else {
-            alert(json?.message ?? 'Something went wrong');
+            setErrorMessage(json?.message ?? "Something went wrong");
           }
         });
     }
   };
 
+  const closeAlert = () => {
+    setErrorMessage("");
+  };
+
   return (
-    <div className="text-gray-500 w-screen h-screen flex items-center justify-center ">
+    <div className="text-gray-500 w-screen h-screen flex items-center justify-center">
       <div className="max-w-md">
         <h2 className="text-center text-3xl mb-5 font-bold text-gray-800">
           Log in to your cms
@@ -58,9 +62,30 @@ const Login = () => {
             Sign in
           </button>
         </form>
+        {errorMessage && (
+          <div className="flex items-center justify-center absolute z-10 top-[50%] right-[50%]">
+            <Alert message={errorMessage} onClick={closeAlert} />
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Login;
+
+function Alert({ message, onClick }) {
+  return (
+    <div className="absolute">
+      <div className="w-[300px] text-center p-10 rounded-lg bg-primary text-white">
+        <p className="mb-5">{message}</p>
+        <button
+          onClick={onClick}
+          className="bg-white text-primary p-2 rounded-md"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
