@@ -28,15 +28,15 @@ const TestimonialTable = () => {
     }
   }
 
-  const deleteItem = async () => {
-    const resp = await fetch(`/admin/testimonial/${itemToDelete}`, {
-      method:'DELETE',
-    });
-    const json = await resp.json();
-    if (resp.status == 200 && json?.status == 'success') {
-      get();
-    }
-  }
+  // const deleteItem = async () => {
+  //   const resp = await fetch(`/admin/testimonial/${itemToDelete}`, {
+  //     method:'DELETE',
+  //   });
+  //   const json = await resp.json();
+  //   if (resp.status == 200 && json?.status == 'success') {
+  //     get();
+  //   }
+  // }
   
   };
   return (
