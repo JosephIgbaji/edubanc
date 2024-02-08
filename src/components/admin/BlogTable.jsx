@@ -1,6 +1,9 @@
 import React from "react";
 
 const BlogTable = () => {
+
+  
+
   return (
     <div className="">
       <table className="w-full mt-10 border">

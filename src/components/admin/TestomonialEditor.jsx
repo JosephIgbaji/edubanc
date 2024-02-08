@@ -7,19 +7,19 @@ export default function TestimonialEditor() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://formspree.io/f/xqkrergr", {
+    
+    const resp = await fetch("/admin/testimonial", { 
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, designation, testimonial }),
     });
-
-    if (response.ok) {
-      alert("Form Submitted");
-      setShowTestimonialEditor(false);
+    const json = await resp.json();
+    if (resp.status == 200 && json?.status == 'success') {
+      setName('');
+      setDesignation('');
+      setTestimonial('');
     } else {
-      alert("Failed to submit form");
+      alert(json?.message ?? 'Something went wrong');
     }
   };
 
@@ -34,6 +34,7 @@ export default function TestimonialEditor() {
               onChange={(e) => setName(e.target.value)}
               className="rounded-lg p-4 border h-14"
               type="text"
+              required
               placeholder="Enter your name"
             />
           </div>
@@ -44,6 +45,7 @@ export default function TestimonialEditor() {
               onChange={(e) => setDesignation(e.target.value)}
               className="rounded-lg p-4 border h-14"
               type="text"
+              required
               placeholder="Enter designation"
             />
           </div>
@@ -55,6 +57,7 @@ export default function TestimonialEditor() {
                 onChange={(e) => setTestimonial(e.target.value)}
                 className="rounded-lg p-4 border h-24"
                 type="text"
+                required
                 placeholder="Enter Your testimonial here"
               />
             </div>
