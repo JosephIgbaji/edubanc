@@ -24,7 +24,7 @@ const AboutModal = ({ onclick }) => {
 
   return (
     <div className="sticky bg-gray-700 bg-opacity-30 w-[100%] h-screen flex items-center justify-center">
-      <div className="bg-white relative mx-auto rounded-3xl border p-3 md:p-5 max-w-screen-sm">
+      <div className="bg-white relative mx-auto rounded-3xl border p-3 md:p-5 pt-16 max-w-screen-sm">
         <p
           className="bg-gray-700 h-5 w-5 absolute top-1 right-5 rounded-full text-white text-lg flex items-center justify-center cursor-pointer"
           onClick={onclick}
