@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import Marquee from "react-fast-marquee";
 
 const Testimonials = () => {
+
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    get();
+  }, []);
+
+  const get = async () => {
+    const resp = await fetch("/admin/testimonial");
+    const json = await resp.json();
+    if (resp.status == 200 && json?.status == 'success') {
+      setList(json.data);
+    }
+  }
+
   return (
     <div className="mt-32 flex flex-col sm:block">
       <div className="mb-3 rounded-lg text-primary font-semibold bg-primary bg-opacity-40 w-[130px] px-2 flex items-center gap-2">
@@ -22,51 +36,11 @@ const Testimonials = () => {
       {/* <div className="flex gap-5 w-full overflow-x-scroll scroll-smooth"> */}
       {/* <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"> */}
       <Marquee>
-        <TestimonialCard
-          testmonial="I am immensely grateful to Edubanc for their financial support, which allowed me to fully immerse myself in the bootcamp without worrying about the financial burden."
-          author="Boluwatife Adesina"
-          role="Software Enginner"
-        />
-        <TestimonialCard
-          testmonial="I'm grateful for the training and funding provided by Decagon and Edubanc respectively as this has helped me achieve my dream of not only becoming a software engineer but advancing to the level of senior fullstack engineer."
-          author="Raji Oluwafunbi"
-          role="Senior Fullstack Engineer."
-        />
-        <TestimonialCard
-          testmonial="Our symbiotic relationship with Edubanc had been a rewarding one, for us, as a corporate organization, our clients, who are the parents and the students, and our financial partners, which is Sterling Bank."
-          author="anonymous"
-          role="Proprietor of Platform Schools"
-        />
-        <TestimonialCard
-          testmonial="I am immensely grateful to Edubanc for their financial support, which allowed me to fully immerse myself in the bootcamp without worrying about the financial burden."
-          author="Boluwatife Adesina"
-          role="Software Enginner"
-        />
-        <TestimonialCard
-          testmonial="I'm grateful for the training and funding provided by Decagon and Edubanc respectively as this has helped me achieve my dream of not only becoming a software engineer but advancing to the level of senior fullstack engineer."
-          author="Raji Oluwafunbi"
-          role="Senior Fullstack Engineer."
-        />
-        <TestimonialCard
-          testmonial="Our symbiotic relationship with Edubanc had been a rewarding one, for us, as a corporate organization, our clients, who are the parents and the students, and our financial partners, which is Sterling Bank."
-          author="anonymous"
-          role="Proprietor of Platform Schools"
-        />
-        <TestimonialCard
-          testmonial="I am immensely grateful to Edubanc for their financial support, which allowed me to fully immerse myself in the bootcamp without worrying about the financial burden."
-          author="Boluwatife Adesina"
-          role="Software Enginner"
-        />
-        <TestimonialCard
-          testmonial="I'm grateful for the training and funding provided by Decagon and Edubanc respectively as this has helped me achieve my dream of not only becoming a software engineer but advancing to the level of senior fullstack engineer."
-          author="Raji Oluwafunbi"
-          role="Senior Fullstack Engineer."
-        />
-        <TestimonialCard
-          testmonial="Our symbiotic relationship with Edubanc had been a rewarding one, for us, as a corporate organization, our clients, who are the parents and the students, and our financial partners, which is Sterling Bank."
-          author="anonymous"
-          role="Proprietor of Platform Schools"
-        />
+        {list.map((i, x) => <TestimonialCard key={`testimonial-${x}`}
+          testmonial={i.testimonial}
+          author={i.name}
+          role={i.designation}
+        />)}
       </Marquee>
       {/* </div> */}
     </div>

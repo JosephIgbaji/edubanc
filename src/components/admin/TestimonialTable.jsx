@@ -13,6 +13,7 @@ const TestimonialTable = () => {
       setList(json.data);
     }
   }
+  
   return (
     <div className="">
       <table className="w-full mt-10 border">
