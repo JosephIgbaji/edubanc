@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import ConfirmModal from "../ConfirmModal";
 
 const TestimonialTable = () => {
   const [list, setList] = useState([]);
+  const [itemToDelete, setItemToDelete] = useState(null);
   useEffect(() => {
     get();
   }, []);
@@ -11,10 +13,22 @@ const TestimonialTable = () => {
     const json = await resp.json();
     if (resp.status == 200 && json?.status == 'success') {
       setList(json.data);
+      setItemToDelete(null);
+    }
+  }
+
+  const deleteItem = async () => {
+    const resp = await fetch(`/admin/testimonial/${itemToDelete}`, {
+      method:'DELETE',
+    });
+    const json = await resp.json();
+    if (resp.status == 200 && json?.status == 'success') {
+      get();
     }
   }
   
   return (
+    <>
     <div className="">
       <table className="w-full mt-10 border">
         <thead className=" ">
@@ -40,14 +54,16 @@ const TestimonialTable = () => {
             <td>{i.designation}</td>
             <td>{new Date(i.createdAt).toDateString()}</td>
             <td className="flex gap-2">
-              <button className="text-red-700">Delete</button>
-              <button>Edit</button>
+              <button className="text-red-700" onClick={() => setItemToDelete(i.id)}>Delete</button>
+              {/* <button>Edit</button> */}
             </td>
             </tr>
           })}        
         </tbody>
       </table>
-    </div>
+      </div>
+      {itemToDelete && <ConfirmModal onNo={() => setItemToDelete(null)} onYes={deleteItem}/>}
+      </>
   );
 };
 
