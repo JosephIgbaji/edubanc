@@ -69,20 +69,12 @@ const CardPayment = () => {
   const handlePayment = (e) => {
     e.preventDefault();
 
-    if (fullName && email && amount) {
+    if (fullName && email && amount) { 
       // console.log(process.env.SECRET_KEY);
-      fetch("https://api.paystack.co/transaction/initialize", {
+      fetch("/donate/init", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization:
-            "Bearer sk_test_8594bc0cbb049e449d98a5cc83bee668c95c8a4e",
-        },
-        body: JSON.stringify({
-          email,
-          amount: amount * 100,
-          callback_url: "https://edubanc-malenxe.vercel.app",
-        }),
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email, amount}),
       })
         .then((res) => res.json())
         .then((data) => {

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Login from "@/components/admin/Login";
 
 import BlogTable from "@/components/admin/BlogTable";
@@ -70,10 +70,13 @@ import TestimonialEditor from "@/components/admin/TestomonialEditor";
 // }
 
 const Page = () => {
-  const [signIn, setSignIn] = useState(true);
+  const [user, setUser] = useState(null);
+  const [isResolving, setIsResolving] = useState(true);
   const [category, setCategory] = useState("blog");
   const [showBlogEditor, setShowBlogEditor] = useState(false);
   const [showTestimonialEditor, setShowTestimonialEditor] = useState(false);
+
+  const signedIn = !isResolving && user;
 
   const style = "rounded-lg w-full border p-3 block mb-5";
   const activeStyle = style + " bg-gray-300 font-bold";
@@ -102,9 +105,27 @@ const Page = () => {
       show: showTestimonialEditor,
     },
   ];
+
+  useEffect(() => {
+    resolve();
+  }, []);
+
+  const resolve = async () => {
+    const resp = await fetch("/admin/user");
+    const json = await resp.json();
+    if (resp.status == 200 && json?.status == 'success') {
+      setUser(json.data);
+      setIsResolving(false);
+    } else {
+      setIsResolving(false);
+    }
+  }
+
+  if (isResolving) return <div>Loading...</div>;
+
   return (
     <div>
-      {!signIn ? (
+      {!signedIn ? (
         <Login />
       ) : (
         <div className="lg:h-screen lg:grid lg:grid-cols-[250px_auto]">
