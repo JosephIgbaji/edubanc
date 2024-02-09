@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const BlogCard = ({ heading, miniPost, image, author, date, avatar }) => {
+const BlogCard = ({ heading, post, image, author, date, avatar, showFooter }) => {
   return (
     <div className="w-[300px] p-2 bg-white rounded-lg">
       <Image src={image} width={300} height={200} alt="alt" />
@@ -24,9 +24,9 @@ const BlogCard = ({ heading, miniPost, image, author, date, avatar }) => {
         </svg>
       </div>
       <p className="text-xs text-black text-opacity-50 mb-2 overflow-hidden h-16 ">
-        {miniPost}
+        {post}
       </p>
-      <div className="flex gap-3 items-center">
+      {showFooter && <div className="flex gap-3 items-center">
         <Image
           className="rounded-full"
           src={avatar}
@@ -38,7 +38,7 @@ const BlogCard = ({ heading, miniPost, image, author, date, avatar }) => {
           <p className="text-sm font-semibold">{author}</p>
           <p className="text-sm text-black text-opacity-50">{date}</p>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };

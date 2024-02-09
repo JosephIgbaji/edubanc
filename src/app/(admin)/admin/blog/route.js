@@ -57,6 +57,9 @@ export async function GET(req) {
                 $addFields: { category: '$category.name' }
             },
             {
+                $sort: { _id: -1 }
+            },
+            {
                 $project: { _id: 0, updatedAt: 0, __v: 0 }
             },
         ];

@@ -4,7 +4,7 @@ import Image from "next/image";
 const HomeBlogCard = ({ heading, post, image }) => {
   return (
     <div className="w-[250px] p-2 h-[280px] bg-white rounded-lg">
-      <Image src={image} width={250} height={200} alt="alt" />
+      {image ? <Image src={image} width={250} height={200} alt="" /> : <div style={{height:'130px'}}></div>}
 
       <div className="flex gap-2 my-3 text-xs justify-between items-center">
         <p className="font-semibold text-sm">{heading}</p>

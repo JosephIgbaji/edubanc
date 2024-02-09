@@ -139,7 +139,7 @@ const Page = () => {
           </div>
         )}
       </div>
-      {isLogout && <ConfirmModal onNo={() => setIsLogout(false)} onYes={logout} />}
+      {isLogout && <ConfirmModal onNo={() => setIsLogout(false)} onYes={logout} message={'Are you sure you want to logout?'} />}
     </>
   );
 };
