@@ -1,12 +1,22 @@
 import React from "react";
 import Image from "next/image";
 
-const BlogCard = ({ heading, post, image, author, date, avatar, showFooter }) => {
+const BlogCard = ({
+  heading,
+  post,
+  image,
+  author,
+  date,
+  avatar,
+  showFooter,
+}) => {
   return (
-    <div className="w-[300px] p-2 bg-white rounded-lg">
+    <div className="w-[300px] p-2 bg-white rounded-lg mb-5">
       <Image src={image} width={300} height={200} alt="alt" />
       <div className="flex gap-2 my-3 text-xs justify-between items-center">
-        <h2 className="font-semibold text-lg">{heading}</h2>
+        <h2 className="font-semibold text-lg overflow-clip h-[25px]">
+          {heading}
+        </h2>
         <svg
           width="24"
           height="24"
@@ -26,19 +36,21 @@ const BlogCard = ({ heading, post, image, author, date, avatar, showFooter }) =>
       <p className="text-xs text-black text-opacity-50 mb-2 overflow-hidden h-16 ">
         {post}
       </p>
-      {showFooter && <div className="flex gap-3 items-center">
-        <Image
-          className="rounded-full"
-          src={avatar}
-          width={40}
-          height={40}
-          alt="alt"
-        />
-        <div>
-          <p className="text-sm font-semibold">{author}</p>
-          <p className="text-sm text-black text-opacity-50">{date}</p>
+      {showFooter && (
+        <div className="flex gap-3 items-center">
+          <Image
+            className="rounded-full"
+            src={avatar}
+            width={40}
+            height={40}
+            alt="alt"
+          />
+          <div>
+            <p className="text-sm font-semibold">{author}</p>
+            <p className="text-sm text-black text-opacity-50">{date}</p>
+          </div>
         </div>
-      </div>}
+      )}
     </div>
   );
 };

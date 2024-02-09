@@ -18,7 +18,7 @@ const About = () => {
     setShowComponent(!showComponent);
   };
   return (
-    <div className="px-5  pt-16 sm:px-32 mx-auto bg-[#F9FAFB;]">
+    <div className="px-5  pt-16 sm:px-24 lg:px-32 mx-auto bg-[#F9FAFB;]">
       <AboutHero />
       {/* <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-32">
         <ReadyCard

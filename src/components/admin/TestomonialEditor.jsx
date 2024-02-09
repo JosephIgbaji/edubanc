@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Alert from "./Alert";
 
 export default function TestimonialEditor() {
   const [name, setName] = useState("");
   const [designation, setDesignation] = useState("");
   const [testimonial, setTestimonial] = useState("");
+  const [list, setList] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    get();
+  }, []);
+
+  const get = async () => {
+    const resp = await fetch("/admin/testimonial/designation");
+    const json = await resp.json();
+    if (resp.status == 200 && json?.status == "success") {
+      setList(json.data);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,8 +34,13 @@ export default function TestimonialEditor() {
       setDesignation("");
       setTestimonial("");
     } else {
-      alert(json?.message ?? "Something went wrong");
+      setErrorMessage(json?.message ?? "Something went wrong");
+      // alert(json?.message ?? "Something went wrong");
     }
+  };
+
+  const closeAlert = () => {
+    setErrorMessage("");
   };
 
   return (
@@ -42,14 +62,16 @@ export default function TestimonialEditor() {
             <label className="mb-3">Designation</label>
             <select
               onChange={(e) => setDesignation(e.target.value)}
-              className="rounded-lg p-4 border w-[280px] h-14 bg-white"
+              className="rounded-lg p-4 border h-14 bg-white"
             >
-              <option value="" selected="" disabled="">
+              <option defaultValue="" disabled="">
                 Select
               </option>
-              <option value="enquiry">Software Engineer</option>
-              <option value="partnership">Professor</option>
-              <option value="consultation">Merchant</option>
+              {list.map((i, j) => (
+                <option key={j} value={i._id}>
+                  {i.name}
+                </option>
+              ))}
             </select>
           </div>
           <div className="mb-10">
@@ -73,6 +95,11 @@ export default function TestimonialEditor() {
             />
           </div>
         </form>
+        {errorMessage && (
+          <div className="flex items-center justify-center absolute z-10 top-[50%] right-[50%]">
+            <Alert message={errorMessage} onClick={closeAlert} />
+          </div>
+        )}
       </div>
     </div>
   );

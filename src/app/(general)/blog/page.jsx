@@ -16,10 +16,12 @@ const Blog = () => {
   };
 
   return (
-    <div className="px-5 flex flex-col items-center pt-16 sm:px-32 mx-auto bg-[#F9FAFB;]">
+    <div className="px-5 flex flex-col items-center pt-16 sm:px-24 lg:px-32 mx-auto bg-[#F9FAFB;]">
       <BlogHeading />
       {/* <div className="grid md:grid-cols-2 gap-10 lg:grid-cols-3 border-b-[1px] pb-5 mb-[20px]"> */}
-       <OurBlog showFooter/>
+      <div className="w-full my-32">
+        <OurBlog showFooter />
+      </div>
       {/* </div> */}
       {showComponent && (
         <div className="fixed top-[25%] right-0 z-10">

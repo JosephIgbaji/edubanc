@@ -27,7 +27,7 @@ export default function Home() {
   // };
 
   return (
-    <main className="relative px-5 sm:px-32 mx-auto bg-[#F9FAFB;] overflow-x-hidden">
+    <main className="relative px-5 sm:px-24 lg:px-32 mx-auto bg-[#F9FAFB;] overflow-x-hidden">
       <Carousel />
       <div className="flex items-center justify-center">
         <Partners />
@@ -48,12 +48,14 @@ export default function Home() {
           </svg>
           <p>Our Blog</p>
         </div>
-        <h2 className="text-3xl font-bold mb-1">Latest, Educative Capivating</h2>
+        <h2 className="text-3xl font-bold mb-1">
+          Latest, Educative Capivating
+        </h2>
         <p className="text-textGray mb-4 text-sm max-w-[600px]">
           Keep up to date with our informative and educational blog
         </p>
       </div>
-      <OurBlog />
+      <OurBlog limit />
       <Testimonials />
       <WhyUs />
       <div className="w-[90%] mt-28 flex items-center justify-center">

@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import Alert from "./admin/Alert";
 
 const AboutModal = ({ onclick }) => {
   const [channel, setChannel] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,10 +18,14 @@ const AboutModal = ({ onclick }) => {
     });
 
     if (response.ok) {
-      alert("Form Submitted");
+      setMessage("Form Submitted");
     } else {
-      alert("Failed to submit form");
+      setMessage("Submission failed");
     }
+  };
+
+  const closeAlert = () => {
+    setMessage("");
   };
 
   return (
@@ -101,6 +107,11 @@ const AboutModal = ({ onclick }) => {
               />
             </div>
           </form>
+          {message && (
+            <div className="flex items-center justify-center absolute z-50 top-[50%] right-[50%]">
+              <Alert message={message} onClick={closeAlert} />
+            </div>
+          )}
         </div>
       </div>
     </div>
