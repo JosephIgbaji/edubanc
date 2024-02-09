@@ -22,7 +22,7 @@ const OurBlog = (props) => {
     // <div className="">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {list?.map((i, x) => (
-        <Link href={`/blog/${i?.slug}`}>
+        <Link key={x} href={`/blog/${i?.slug}`}>
           {/* <HomeBlogCard heading={i.title} post={i.body} image={i.cover} /> */}
           <BlogCard
             heading={i.title}

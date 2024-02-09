@@ -1,15 +1,15 @@
 "use client";
-import ShareContainer from "@/components/blog/ShareContainer";
 import React, { useEffect, useState } from "react";
+import ShareContainer from "@/components/blog/ShareContainer";
 import Image from "next/image";
-import BottomBlogPost from "@/components/blog/BottomBlogPost";
+// import BottomBlogPost from "@/components/blog/BottomBlogPost";
 import { useParams } from "next/navigation";
 import Loading from "@/app/(admin)/Loading";
 import OurBlog from "@/components/home/OurBlog";
 import Link from "next/link";
 import ButtonPrimary from "@/components/ButtonPrimary";
 
-const page = () => {
+const Page = () => {
   const params = useParams();
 
   const [post, setPost] = useState(null);
@@ -100,4 +100,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
