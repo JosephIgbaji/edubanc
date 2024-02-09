@@ -21,7 +21,7 @@ export const BlogCategory = mongoose.models.blog_categories || mongoose.model("b
 const blogSchema = new mongoose.Schema(
     {
         title: { type: String, required: true },
-        slug: { type: String, required: true },
+        slug: { type: String, required: true, unique: true },
         category: { type: mongoose.Types.ObjectId, required: true },
         readDuration: { type: String },
         body: { type: String, required: true },
