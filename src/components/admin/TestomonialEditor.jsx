@@ -7,19 +7,19 @@ export default function TestimonialEditor() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const resp = await fetch("/admin/testimonial", { 
+
+    const resp = await fetch("/admin/testimonial", {
       method: "POST",
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, designation, testimonial }),
     });
     const json = await resp.json();
-    if (resp.status == 200 && json?.status == 'success') {
-      setName('');
-      setDesignation('');
-      setTestimonial('');
+    if (resp.status == 200 && json?.status == "success") {
+      setName("");
+      setDesignation("");
+      setTestimonial("");
     } else {
-      alert(json?.message ?? 'Something went wrong');
+      alert(json?.message ?? "Something went wrong");
     }
   };
 
@@ -40,14 +40,17 @@ export default function TestimonialEditor() {
           </div>
           <div className="flex flex-col mb-5">
             <label className="mb-3">Designation</label>
-            <input
-              value={designation}
+            <select
               onChange={(e) => setDesignation(e.target.value)}
-              className="rounded-lg p-4 border h-14"
-              type="text"
-              required
-              placeholder="Enter designation"
-            />
+              className="rounded-lg p-4 border w-[280px] h-14 bg-white"
+            >
+              <option value="" selected="" disabled="">
+                Select
+              </option>
+              <option value="enquiry">Software Engineer</option>
+              <option value="partnership">Professor</option>
+              <option value="consultation">Merchant</option>
+            </select>
           </div>
           <div className="mb-10">
             <div className="flex flex-col">
