@@ -8,8 +8,6 @@ import { cookies } from "next/headers";
 export async function POST(req) {
     await connectDB();
 
-    // for (let model in mongoose.models) delete mongoose.models[model]
-
     const body = await req.json();
     const { email, pwd } = body;
     if (!email || !pwd) return NextResponse.json({ status: 'error', message: 'Missing parameter' }, { status: 400 });

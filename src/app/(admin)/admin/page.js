@@ -8,6 +8,7 @@ import ComponentsHeader from "@/components/admin/ComponentsHeader";
 // import TextEditor from "@/components/admin/TextEditor";
 import TestimonialTable from "@/components/admin/TestimonialTable";
 import TestimonialEditor from "@/components/admin/TestomonialEditor";
+import TextEditor from "@/components/admin/TextEditor";
 
 // export default function Home() {
 //   const [signIn, setSignIn] = useState(true);
@@ -161,11 +162,11 @@ const Page = () => {
             {!showTestimonialEditor && category !== "blog" && (
               <TestimonialTable />
             )}
-            {/* {showBlogEditor && (
+            {showBlogEditor && (
               <div className="absolute lg:w-[90%]">
                 <TextEditor />
               </div>
-            )} */}
+            )}
             {showTestimonialEditor && (
               <div className="absolute lg:w-[90%]">
                 <TestimonialEditor />

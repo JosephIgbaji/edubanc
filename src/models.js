@@ -12,9 +12,19 @@ const userSchema = new mongoose.Schema(
 
 export const User = mongoose.models.users || mongoose.model("users", userSchema);
 
+const blogCategorySchema = new mongoose.Schema({
+    name: String
+});
+
+export const BlogCategory = mongoose.models.blog_categories || mongoose.model("blog_categories", blogCategorySchema);
+
 const blogSchema = new mongoose.Schema(
     {
-        title: String
+        title: { type: String, required: true },
+        category: { type: mongoose.Types.ObjectId, required: true },
+        readDuration: { type: String },
+        body: { type: String, required: true },
+        cover: { type: String },
     },
     {
         timestamps: true,
