@@ -32,10 +32,6 @@ export async function GET(req) {
     try {
         await connectDB();
 
-        const token = cookies().get('user')?.value;
-        if (!token) return NextResponse.json({ status: 'error', message: 'Unauthorized' }, { status: 401 });
-        jwt.verify(token, process.env.COOKIE_SECRET);
-
         const q = await Testimonial.aggregate([
             {
                 $lookup: {
@@ -61,10 +57,6 @@ export async function GET(req) {
 
         return NextResponse.json({ status: 'success', message: 'Listed', data: q ?? [] }, { status: 200 });
     } catch (error) {
-        if (error.name == 'JsonWebTokenError') {
-            return NextResponse.json({ status: 'error', message: 'Unauthorized' }, { status: 401 });
-        } else {
-            return NextResponse.json({ status: 'error', message: 'Internal server error' }, { status: 500 });
-        }
+        return NextResponse.json({ status: 'error', message: 'Internal server error' }, { status: 500 });
     }
 }
