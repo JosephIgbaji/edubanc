@@ -5,10 +5,11 @@ import Login from "@/components/admin/Login";
 import BlogTable from "@/components/admin/BlogTable";
 import ComponentsHeader from "@/components/admin/ComponentsHeader";
 
-// import TextEditor from "@/components/admin/TextEditor";
+import TextEditor from "@/components/admin/TextEditor";
 import TestimonialTable from "@/components/admin/TestimonialTable";
 import TestimonialEditor from "@/components/admin/TestomonialEditor";
 import Loading from "../Loading";
+import ConfirmModal from "@/components/ConfirmModal";
 
 const Page = () => {
   const [user, setUser] = useState(null);
@@ -16,6 +17,7 @@ const Page = () => {
   const [category, setCategory] = useState("blog");
   const [showBlogEditor, setShowBlogEditor] = useState(false);
   const [showTestimonialEditor, setShowTestimonialEditor] = useState(false);
+  const [isLogout, setIsLogout] = useState(false);
 
   const signedIn = !isResolving && user;
 
@@ -62,6 +64,14 @@ const Page = () => {
     }
   };
 
+  const logout = async () => {
+    const resp = await fetch("/admin/logout");
+    const json = await resp.json();
+    if (resp.status == 200 && json?.status == "success") {
+      window.location.reload();
+    }
+  };
+
   if (isResolving)
     return (
       <div>
@@ -70,64 +80,67 @@ const Page = () => {
     );
 
   return (
-    <div>
-      {!signedIn ? (
-        <>
-          <Login />
-        </>
-      ) : (
-        <div className="lg:h-screen lg:grid lg:grid-cols-[250px_auto]">
-          <div className="bg-blue-100 bg-opacity-50 px-4 lg:pt-20 lg:flex flex-col justify-between pb-10">
-            <div>
-              <button
-                onClick={() => {
-                  setCategory("blog");
-                  setShowBlogEditor(false);
-                  setShowTestimonialEditor(false);
-                }}
-                className={category === "blog" ? activeStyle : style}
-              >
-                Blog
-              </button>
-              <button
-                onClick={() => {
-                  setCategory("testimonials");
-                  setShowBlogEditor(false);
-                  setShowTestimonialEditor(false);
-                }}
-                className={category !== "blog" ? activeStyle : style}
-              >
-                Testimonials
+    <>
+      <div>
+        {!signedIn ? (
+          <>
+            <Login />
+          </>
+        ) : (
+          <div className="lg:h-screen lg:grid lg:grid-cols-[250px_auto]">
+            <div className="bg-blue-100 bg-opacity-50 px-4 lg:pt-20 lg:flex flex-col justify-between pb-10">
+              <div>
+                <button
+                  onClick={() => {
+                    setCategory("blog");
+                    setShowBlogEditor(false);
+                    setShowTestimonialEditor(false);
+                  }}
+                  className={category === "blog" ? activeStyle : style}
+                >
+                  Blog
+                </button>
+                <button
+                  onClick={() => {
+                    setCategory("testimonials");
+                    setShowBlogEditor(false);
+                    setShowTestimonialEditor(false);
+                  }}
+                  className={category !== "blog" ? activeStyle : style}
+                >
+                  Testimonials
+                </button>
+              </div>
+              <button className="text-sm p-2 rounded-lg hover:bg-gray-300 hover:font-bold" onClick={setIsLogout}>
+                Log Out
               </button>
             </div>
-            <button className="text-sm p-2 rounded-lg hover:bg-gray-300 hover:font-bold">
-              Log Out
-            </button>
+            <div className="relative px-10 pt-10">
+              <ComponentsHeader
+                headers={
+                  category === "blog" ? componentsObject[0] : componentsObject[1]
+                }
+              />
+              {!showBlogEditor && category === "blog" && <BlogTable />}
+              {!showTestimonialEditor && category !== "blog" && (
+                <TestimonialTable />
+              )}
+              {showBlogEditor && (
+                <div className="absolute lg:w-[90%]">
+                  <TextEditor />
+                </div>
+              )}
+              {showTestimonialEditor && (
+                <div className="absolute lg:w-[90%]">
+                  <TestimonialEditor />
+                </div>
+              )}
+            </div>
           </div>
-          <div className="relative px-10 pt-10">
-            <ComponentsHeader
-              headers={
-                category === "blog" ? componentsObject[0] : componentsObject[1]
-              }
-            />
-            {!showBlogEditor && category === "blog" && <BlogTable />}
-            {!showTestimonialEditor && category !== "blog" && (
-              <TestimonialTable />
-            )}
-            {showBlogEditor && (
-              <div className="absolute lg:w-[90%]">
-                <TextEditor />
-              </div>
-            )}
-            {showTestimonialEditor && (
-              <div className="absolute lg:w-[90%]">
-                <TestimonialEditor />
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+      {isLogout && <ConfirmModal onNo={() => setIsLogout(false)} onYes={logout} />}
+    </>
   );
 };
 

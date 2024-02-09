@@ -8,7 +8,7 @@ export async function GET(req) {
     try {
         await connectDB();
 
-        // for (let model in mongoose.models) delete mongoose.models[model];
+        for (let model in mongoose.models) delete mongoose.models[model];
 
         const token = cookies().get('user')?.value;
         if (!token) return NextResponse.json({ status: 'error', message: 'Unauthorized' }, { status: 401 });

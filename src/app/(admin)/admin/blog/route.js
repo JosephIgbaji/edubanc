@@ -16,7 +16,9 @@ export async function POST(req) {
         const { title, category, readDuration, body, cover } = json;
         if (!title || !category || !body) return NextResponse.json({ status: 'error', message: 'Missing parameter' }, { status: 400 });
 
-        const q = await Blog.create({ title, category, readDuration, body, cover });
+        const slug = title.replaceAll(' ', '-').toLowerCase();
+
+        const q = await Blog.create({ title, slug, category, readDuration, body, cover });
 
         return NextResponse.json({ status: 'success', message: 'Listed', data: q ?? [] }, { status: 200 });
     } catch (error) {
@@ -33,11 +35,10 @@ export async function GET(req) {
     try {
         await connectDB();
 
-        const token = cookies().get('user')?.value;
-        if (!token) return NextResponse.json({ status: 'error', message: 'Unauthorized' }, { status: 401 });
-        jwt.verify(token, process.env.COOKIE_SECRET);
+        const { searchParams } = new URL(req.url);
+        const limit = searchParams.get('limit');
 
-        const q = await Blog.aggregate([
+        const arr = [
             {
                 $lookup: {
                     from: 'blog_categories',
@@ -57,15 +58,17 @@ export async function GET(req) {
             },
             {
                 $project: { _id: 0, updatedAt: 0, __v: 0 }
-            }
-        ]);
+            },
+        ];
+        if (limit) {
+            arr.push({
+                $limit: parseInt(limit)
+            });
+        }
+        const q = await Blog.aggregate(arr);
 
         return NextResponse.json({ status: 'success', message: 'Listed', data: q ?? [] }, { status: 200 });
     } catch (error) {
-        if (error.name == 'JsonWebTokenError') {
-            return NextResponse.json({ status: 'error', message: 'Unauthorized' }, { status: 401 });
-        } else {
-            return NextResponse.json({ status: 'error', message: 'Internal server error' }, { status: 500 });
-        }
+        return NextResponse.json({ status: 'error', message: 'Internal server error' }, { status: 500 });
     }
 }
