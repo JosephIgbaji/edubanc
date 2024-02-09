@@ -24,7 +24,7 @@ const HomeBlogCard = ({ heading, post, image }) => {
           />
         </svg>
       </div>
-      <p className="text-xs mb-2 ">{post}</p>
+      <p className="text-xs mb-2 h-[100px] overflow-clip ">{post}</p>
     </div>
   );
 };

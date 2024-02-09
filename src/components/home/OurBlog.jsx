@@ -3,7 +3,6 @@ import Link from "next/link";
 import HomeBlogCard from "./HomeBlogCard";
 
 const OurBlog = () => {
-
   const [list, setList] = useState([]);
   useEffect(() => {
     get();
@@ -12,10 +11,10 @@ const OurBlog = () => {
   const get = async () => {
     const resp = await fetch("/admin/blog?limit=3");
     const json = await resp.json();
-    if (resp.status == 200 && json?.status == 'success') {
+    if (resp.status == 200 && json?.status == "success") {
       setList(json.data);
     }
-  }
+  };
 
   return (
     <div className="mt-32">
@@ -33,17 +32,17 @@ const OurBlog = () => {
       </div>
       <h2 className="text-3xl font-bold mb-1">Latest, Educative Capivating</h2>
       <p className="text-textGray mb-4 text-sm max-w-[600px]">
-        Keep up to date with our informative and educational blog 
-      </p> 
+        Keep up to date with our informative and educational blog
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {list?.map((i, x) => <Link href="/blog/relevanceofeducation">
-          <HomeBlogCard
-            heading={i.title}
-            post={i.body}
-            image={i.cover}
-          />
-        </Link>)}
+        {list
+          ?.filter((j) => list.indexOf(j) < 3)
+          .map((i, x) => (
+            <Link href="/blog/relevanceofeducation">
+              <HomeBlogCard heading={i.title} post={i.body} image={i.cover} />
+            </Link>
+          ))}
       </div>
     </div>
   );
