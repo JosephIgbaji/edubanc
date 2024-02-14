@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+
 import ShareContainer from "@/components/blog/ShareContainer";
 import Image from "next/image";
 // import BottomBlogPost from "@/components/blog/BottomBlogPost";
@@ -14,6 +15,7 @@ const Page = () => {
 
   const [post, setPost] = useState(null);
   useEffect(() => {
+    // console.log(window.location.href);
     if (params?.id) get();
   }, [params.id]);
 
@@ -74,7 +76,7 @@ const Page = () => {
       <div className="min-w-[300px] sm:max-w-[500px] mb-10 text-justify">
         <p>{post?.body}</p>
         <div className="mt-20">
-          <ShareContainer />
+          <ShareContainer url={window.location.href} title={post?.title} />
         </div>
       </div>
       <div className="w-full mt-32">
