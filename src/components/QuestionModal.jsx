@@ -33,31 +33,33 @@ const QuestionModal = ({ onclose }) => {
         >
           <span>x</span>
         </p>
-        <div className="text-center mb-10">
-          <h2 className="text-2xl font-semibold mb-2">
+        <div className="text-center mb-3 md:mb-10">
+          <h2 className="md:text-2xl font-semibold mb-2">
             Got any questions for us?
           </h2>
-          <p>We&apos;d love to hear from you. please fill out the form.</p>
+          <p className="text-sm md:text-lg">
+            We&apos;d love to hear from you. please fill out the form.
+          </p>
         </div>
         <div>
           <form onSubmit={handleSubmit}>
             <div className="flex md:justify-between flex-col md:flex-row gap-5 mb-5">
-              <div className="flex flex-col mb-5 md:mb-0">
+              <div className="flex flex-col mb-2 md:mb-0">
                 <label className="mb-3">FirstName</label>
                 <input
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="rounded-lg p-4 border max-w-[280px] h-14"
+                  className="rounded-lg p-2 md:p-4 border max-w-[280px] h-8 md:h-14"
                   type="text"
                   placeholder="First name"
                 />
               </div>
-              <div className="flex flex-col mb-5 md:mb-0">
-                <label className="mb-3">FirstName</label>
+              <div className="flex flex-col mb-2 md:mb-0">
+                <label className="mb-3">LastName</label>
                 <input
-                  value={firstName}
+                  value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="rounded-lg p-4 border max-w-[280px] h-14"
+                  className="rounded-lg p-2 md:p-4 border max-w-[280px] h-8 md:h-14"
                   type="text"
                   placeholder="Last name"
                 />
@@ -68,18 +70,18 @@ const QuestionModal = ({ onclose }) => {
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="rounded-lg p-4 border w-[280px] h-14"
+                className="rounded-lg p-2 md:p-4 border w-[280px] h-8 md:h-14"
                 type="email"
                 placeholder="Enter email address"
               />
             </div>
-            <div className="mb-10">
+            <div className="md:mb-10">
               <div className="flex flex-col">
                 <label className="mb-3">Message</label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="rounded-lg p-4 border h-24"
+                  className="rounded-lg p-2 md:p-4 border md:h-24"
                   type="text"
                   placeholder="Enter Your message here"
                 />
