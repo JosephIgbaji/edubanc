@@ -5,6 +5,7 @@ const SubscribeToNews = () => {
     <div className=" overflow-x-hidden mt-32 mb-32 text-center flex flex-col items-center justify-center">
       <h2 className="text-2xl font-semibold mb-4">
         &quot;Stay in the loop and be the first to know about exciting updates!
+        <br />
         Subscribe to our newsletter from Edubanc.&quot;
       </h2>
 
