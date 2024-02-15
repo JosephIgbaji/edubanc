@@ -1,8 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+// import Alert from "../admin/Alert";
 
 const SubscribeToNews = () => {
+  // const [message, setMessage] = useState("");
+
+  // const HandleShowAlert = () => {
+  //   setMessage("Subscription Successfull");
+  // };
+
+  // const HandleClose = () => {
+  //   setMessage("");
+  // };
+
   return (
-    <div className=" overflow-x-hidden mt-32 mb-32 text-center flex flex-col items-center justify-center">
+    <div className="overflow-x-hidden mt-32 mb-32 text-center flex flex-col items-center justify-center">
       <h2 className="text-2xl font-semibold mb-4">
         &quot;Stay in the loop and be the first to know about exciting updates!
         <br />
@@ -54,6 +65,7 @@ const SubscribeToNews = () => {
 
             <div class="clear">
               <input
+                // onClick={() => HandleShowAlert}
                 className="bg-primary cursor-pointer p-2 rounded-2xl text-white my-3"
                 type="submit"
                 name="subscribe"
@@ -69,6 +81,11 @@ const SubscribeToNews = () => {
       <div className="text-xs text-textGray">
         We care about your data in our privacy policy
       </div>
+      {/* {message && (
+        <div className="flex items-center justify-center absolute z-10 top-[50%] right-[50%]">
+          <Alert message={message} onClick={HandleClose} />
+        </div>
+      )} */}
     </div>
   );
 };

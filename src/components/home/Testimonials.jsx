@@ -3,7 +3,6 @@ import TestimonialCard from "./TestimonialCard";
 import Marquee from "react-fast-marquee";
 
 const Testimonials = () => {
-
   const [list, setList] = useState([]);
   useEffect(() => {
     get();
@@ -12,10 +11,10 @@ const Testimonials = () => {
   const get = async () => {
     const resp = await fetch("/admin/testimonial");
     const json = await resp.json();
-    if (resp.status == 200 && json?.status == 'success') {
+    if (resp.status == 200 && json?.status == "success") {
       setList(json.data);
     }
-  }
+  };
 
   return (
     <div className="mt-32 flex flex-col sm:block">
@@ -35,12 +34,15 @@ const Testimonials = () => {
       <p className="text-textGray mb-4 text-sm max-w-[600px] "></p>
       {/* <div className="flex gap-5 w-full overflow-x-scroll scroll-smooth"> */}
       {/* <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"> */}
-      <Marquee>
-        {list.map((i, x) => <TestimonialCard key={`testimonial-${x}`}
-          testmonial={i.testimonial}
-          author={i.name}
-          role={i.designation}
-        />)}
+      <Marquee pauseOnClick={true} pauseOnHover={true}>
+        {list.map((i, x) => (
+          <TestimonialCard
+            key={`testimonial-${x}`}
+            testmonial={i.testimonial}
+            author={i.name}
+            role={i.designation}
+          />
+        ))}
       </Marquee>
       {/* </div> */}
     </div>

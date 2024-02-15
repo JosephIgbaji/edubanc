@@ -6,7 +6,7 @@ const TestimonialCard = ({ testmonial, author, role, color }) => {
       <h2 style={{ color }} className="text-4xl md:text-6xl text-primary">
         “
       </h2>
-      <p className="text-sm mb-2 ">{testmonial}</p>
+      <p className="text-sm mb-2 h-[130px] overflow-clip">{testmonial}</p>
       <div className="flex gap-2 text-xs flex-col md:flex-row md:justify-between md:items-center">
         <p className="font-semibold">{author}</p>
         <p>{role}</p>
