@@ -64,7 +64,10 @@ const Login = () => {
           </button>
         </form>
         {errorMessage && (
-          <div className="flex items-center justify-center absolute z-10 top-[50%] right-[50%]">
+          // <div className="flex items-center justify-center absolute z-10 top-[50%] right-[50%]">
+          //   <Alert message={errorMessage} onClick={closeAlert} />
+          // </div>
+          <div className="">
             <Alert message={errorMessage} onClick={closeAlert} />
           </div>
         )}

@@ -31,12 +31,12 @@ export function RenderAboutModal() {
   return <div>{showComponent && <AboutModal onclick={handleClose} />}</div>;
 }
 
-// export function RenderQuestionModal() {
-//   const [showComponent, setShowComponent] = useState(false);
+// export function RenderQuestionModal({}) {
+//   const [showQuestion, setShowQuestion] = useState(false);
 
 //   const handleShow = () => {
-//     setShowComponent(false);
+//     setShowQuestion(false);
 //   };
 
-//   return <div>{showComponent && <AboutModal onclick={handleShow} />}</div>;
+//   return <div>{showQuestion && <QuestionModal onclick={handleShow} />}</div>;
 // }

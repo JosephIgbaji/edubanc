@@ -69,7 +69,7 @@ export default function Home() {
       <Questions />
       <SubscribeToNews />
       {showComponent && (
-        <div className="fixed top-[10%] md:top-[12%] right-0 z-10">
+        <div className="">
           <QuestionModal onclose={handleShow} />
         </div>
       )}

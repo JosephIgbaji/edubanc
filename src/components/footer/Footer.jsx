@@ -1,8 +1,16 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import QuestionModal from "../QuestionModal";
 
 const Footer = () => {
+  const [showComponent, setShowComponent] = useState(false);
+
+  const handleShow = () => {
+    setShowComponent(!showComponent);
+  };
+
   return (
     <div className="md:px-32 px-20 py-5 pt-20 bg-[#101828]">
       <div className="grid gap-5 sm:grid-cols-2 lg:flex lg:justify-between">
@@ -139,12 +147,22 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-3">
           <p className="text-xs text-textGray">Contact Us</p>
-          <p className="text-white text-sm"> Help Center</p>
-          <Link className="text-white text-sm" href="/">
+          <p onClick={handleShow} className="text-white text-sm cursor-pointer">
+            {" "}
+            Help Center
+          </p>
+          {/* <Link className="text-white text-sm" href="/">
             hello@edubanc.ng
-          </Link>
-          <p className="text-white text-sm">Careline 1 - 09047309006</p>
-          <p className="text-white text-sm">Careline 2 - 09071934474</p>
+          </Link> */}
+          <a className="text-white text-sm" href="mailto:hello@edubanc.ng">
+            hello@edubanc.ng
+          </a>
+          <p className="text-white text-sm">
+            <a href="tel:+2348051125097">Careline 1 - 09047309006</a>
+          </p>
+          <p className="text-white text-sm">
+            <a href="tel:+2348051125097">Careline 2 - 09071934474</a>
+          </p>
           <p className="text-white text-sm">Got a Complaint?</p>
         </div>
       </div>
@@ -259,6 +277,11 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      {showComponent && (
+        <div className="fixed top-[10%] md:top-[12%] right-0 z-10">
+          <QuestionModal onclose={handleShow} />
+        </div>
+      )}
     </div>
   );
 };
