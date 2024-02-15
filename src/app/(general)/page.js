@@ -67,7 +67,7 @@ export default function Home() {
         />
       </div>
       <Questions />
-      <SubscribeToNews />
+      {/* <SubscribeToNews /> */}
       {showComponent && (
         <div className="fixed top-[10%] md:top-[12%] right-0 z-10">
           <QuestionModal onclose={handleShow} />

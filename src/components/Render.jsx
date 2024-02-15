@@ -6,12 +6,22 @@ import QuestionModal from "./QuestionModal";
 export function RenderAboutModal() {
   const [showComponent, setShowComponent] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowComponent(true);
-    }, 1 * 30 * 1000); // 30 seconds in milliseconds
+  // const [showPopup, setShowPopup] = useState(false);
 
-    return () => clearTimeout(timeout);
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisited");
+
+    // If the user has not visited, show the popup and set the flag
+    if (!hasVisited) {
+      const timeout = setTimeout(() => {
+        setShowComponent(true);
+        localStorage.setItem("hasVisited", "true");
+      }, 1 * 30 * 1000); // 30 seconds in milliseconds
+
+      return () => clearTimeout(timeout);
+    }
+
+    return;
   }, []);
 
   const handleClose = () => {
@@ -21,12 +31,12 @@ export function RenderAboutModal() {
   return <div>{showComponent && <AboutModal onclick={handleClose} />}</div>;
 }
 
-export function RenderQuestionModal() {
-  const [showComponent, setShowComponent] = useState(false);
+// export function RenderQuestionModal() {
+//   const [showComponent, setShowComponent] = useState(false);
 
-  const handleShow = () => {
-    setShowComponent(false);
-  };
+//   const handleShow = () => {
+//     setShowComponent(false);
+//   };
 
-  return <div>{showComponent && <AboutModal onclick={handleClose} />}</div>;
-}
+//   return <div>{showComponent && <AboutModal onclick={handleShow} />}</div>;
+// }

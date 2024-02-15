@@ -61,13 +61,7 @@ const ShareContainer = ({ url, title }) => {
           </svg>
           <p>{copied ? "copied" : "Copy link"}</p>
         </div>
-        <div>
-          {/* Facebook Share Button */}
-
-          {/* Twitter Share Button */}
-
-          {/* LinkedIn Share Button */}
-        </div>
+        <div></div>
         <div className="p-2 rounded-lg border-[1px] items-center justify-between">
           <TwitterShareButton url={url} title={title}>
             <svg
